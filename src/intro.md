@@ -1,11 +1,11 @@
 <div class="flex-container">
         <img src="https://github.com/ProfessionalLinuxUsersGroup/img/blob/main/Assets/Logos/ProLUG_Round_Transparent_LOGO.png?raw=true" width="64" height="64"></img>
     <p>
-        <h1>ProLUG System Administration for the Enterprise</h1>
+        <h1>ProLUG Security Engineering Course</h1>
     </p>
 </div>
 
-Welcome to the ProLUG Enterprise Linux System Administration Course Book.
+Welcome to the ProLUG Security Engineering Course Book.
 
 ## This Book
 
@@ -18,32 +18,33 @@ Furthermore, the book has been built with mdbook for ease of navigation. Be sure
 
 ## This Course
 
-Addresses how the Linux systems work for administration level tasks inside a corporate environment. This course will explore everything from the administration of a Linux server and fundamental command line tasks to advanced topics such as patching and web administration.
+This course addresses how to secure Linux a corporate environment. This course will focus on adhering to regulations, best practices, and industry standards. This course will expose the concepts of controls, their implementation, and how they fit into overall security posture. The learner will practice securely building, deploying, integrating, and monitoring Linux systems. Standard security documentation and reporting will be practiced throughout, to better prepare the learner for the industry.
 
 ## Major Instructional Areas
 
-- Server build and Hardware components
-- Command Line tools and Syntax
-- Basic Scripting
-- Linux networking
-- Linux security practices
-- Automation and repeating tasks
-- Implement Networking in Linux
-- Troubleshooting
-- Benchmarking and Baselining
+- Build Standards and Compliance.
+- Securing the Network Connection.
+- User Access and System Integration.
+- Bastion Hosts and Air-Gaps.
+- Updating Systems and Patch Cycles.
+- Monitoring and Parsing Logs.
+- Monitoring and Alerting.
+- Configuration drift and Remediation.
+- Certificate and Key Madness.
+
 
 ## Course objectives
 
-- Explain the server build process and hardware system components.
-- Analyze system security and implement basic hardening of system.
-- Construct command line syntax to explore the system and gather resource information.
-- Construct scripting structures of assigning variables, conditional tests, and recording output to
-  generate scripts that do basic system tasks.
-- Analyze and troubleshoot the Apache Web Server
-- Analyze and troubleshoot the NFS/Samba File Shares.
-- Analyze Docker and Kubernetes components and workflows.
-- Describe and troubleshoot network services.
-- Write and perform Ansible tasks to automate deployments to servers.
+
+- Build and configure a Linux system to adhere to compliance frameworks.
+- Integrating Linux to a network in a secure fashion.
+- Integrating Linux with Enterprise Identity and Access (IAM) frameworks.
+- Implement User ingress controls to a system/network with bastion frameworks.
+- Updating Linux to resolve security vulnerabilities and reporting out to security teams.
+- Design logging workflows to move event logging off of systems for real time monitoring.
+- Monitoring and alerting on events in Linux.
+- Maintaining system configuration and remediating drift.
+
 
 ## Instructional Methods
 
