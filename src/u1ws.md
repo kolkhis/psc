@@ -1,22 +1,12 @@
-# ProLUG Security Engineering
-
----
-
 <head>
     <style> .flex-container { display: flex; align-items: center; gap: 20px; } </style>
 </head>
 <div class="flex-container">
         <img src="https://github.com/ProfessionalLinuxUsersGroup/img/blob/main/Assets/Logos/ProLUG_Round_Transparent_LOGO.png?raw=true" width="64" height="64">
     <p>
-        <h1>Linux Fundamentals and Systems Editing Tools</h1>
+        <h1>Unit 1 Worksheet - Linux Fundamentals and Systems Editing Tools</h1>
     </p>
 </div>
-
-## Unit 1 Worksheet
-
----
-
-## Introduction
 
 Welcome to Unit 1 of the Professional Linux Users Group (ProLUG) Systems Administration Course.
 With this worksheet students will explore the foundations of Linux and its many constituent parts.
@@ -43,10 +33,15 @@ learn offers no better teacher. Again welcome, and good luck in your studies.
 
 ---
 
-A major aspect of this course is to intake, comprehend, and discuss the assigned topics. Take the time
-to fully absorb each topic and contribute to the discussion thread by sharing your thoughts. Interaction
-with peers is also expected; the goal is to compare and contrast ideas to build a solid foundation of
-knowledge.
+A major aspect of this course is to intake, comprehend, and discuss the assigned
+topics. Take the time to fully absorb each topic and contribute to the discussion
+thread by sharing your thoughts. Interaction with peers is also expected; the goal is
+to compare and contrast ideas to build a solid foundation of knowledge.
+
+Fill out this worksheet as you watch the unit video.
+Discussion posts can be completed afterwards, answers to be posted in Discord.
+You must both answer the discussion questions and respond to another student's
+answers. This is only required if you want the certification.
 
 #### Discussion Post #1
 
@@ -55,12 +50,6 @@ The first question of this course is, “What is Security?”
 1. Describe the CIA Triad.
 2. What is the relationship between Authority, Will, and Force as they relate to security?
 3. What are the types of controls and how do they relate to the above question?
-
-<div class="warning">
-Submit your input by following the link below:
-</div>
-
-- [Link to Discussion Post 1](Placeholder)
 
 #### Discussion Post #2
 
@@ -71,38 +60,51 @@ Find a STIG or compliance requirement that you do not agree is necessary for a s
 3. Defend why you think it is not necessary. (What type of defenses do you think you could present?)
 
 <div class="warning">
-Submit your input by following the link below:
+Submit your input by following the link below.
+
+The discussion posts are done in Discord threads. Click the 'Threads' icon on the top right and search for the discussion post.
+
 </div>
 
-- [Link to Discussion Post 2](Placeholder)
+- [Link to Discussion Posts](https://discord.com/channels/611027490848374811/1098309490681598072)
 
 ## Definitions
 
 ---
 
-- Definitions/Terminology
-- CIA Triad 
-- Regulatory Compliance 
-- HIPAA
-- Industry Standards 
-- PCI/DSS
-- Security Frameworks
-- CIS
-- STIG
+Definitions/Terminology
+
+CIA Triad
+
+Regulatory Compliance
+
+HIPAA
+
+Industry Standards
+
+PCI/DSS
+
+Security Frameworks
+
+CIS
+
+STIG
 
 ## Digging Deeper
 
 ---
 
 1. Research a risk management framework. https://csrc.nist.gov/projects/risk-management/about-rmf
-- What are the areas of concern for risk management?
+
+   - What are the areas of concern for risk management?
 
 2. Research the difference between quantitative and qualitative risks.
-- Why might you use one or the other?
+
+   - Why might you use one or the other?
 
 3. Research ALE, SLE, and ARO.
-- What are these terms in relation to?
-- How do these help in the risk discussion?
+   - What are these terms in relation to?
+   - How do these help in the risk discussion?
 
 ## Reflection Questions
 
