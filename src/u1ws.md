@@ -92,7 +92,7 @@ STIG
 
 ---
 
-1. Research a risk management framework. https://csrc.nist.gov/projects/risk-management/about-rmf
+1. Research a risk management framework. <https://csrc.nist.gov/projects/risk-management/about-rmf>
 
    - What are the areas of concern for risk management?
 

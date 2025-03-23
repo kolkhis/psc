@@ -5,7 +5,6 @@
     </p>
 </div>
 
-
 ## Module 1: Exploring System Information
 
 ### Exercise 1.1: Familiarizing ourselves with the System
@@ -45,7 +44,11 @@ lsmod | grep -i tables
 ## Module 2: PreLAB
 
 1. Download the STIG Viewer 2.18 from - <https://public.cyber.mil/stigs/downloads/>
+<!-- TODO: Host these screenshots locally -->
+![image](https://github.com/user-attachments/assets/718b0c53-9bcc-4782-a2fb-bfc8b684bad7)
+
 2. Download the STIG for Mariadb and the import it into your STIG viewer.
+![image](https://github.com/user-attachments/assets/8c6e9b50-3c7e-4670-8092-83a2ae152ae2)
 
 ## Module 3: Lab
 
@@ -72,19 +75,25 @@ ss -ntulp | grep 3306
 ```
 
 - Check and remediate v-253666 STIG.
+![image](https://github.com/user-attachments/assets/e882e555-773f-43c2-b6df-a12fe34e64eb)
 
   - What is the problem?
   - What is the fix?
   - What type of control is being implemented?
   - Is it set properly on your system?
 
-  ```sql
-  -- Connect to `mariadb` locally.
-
-  SELECT user, max_user_connections FROM mysql.user;
-
-  -- Can you remediate this finding?
+  Connect to MariaDB locally.
+  ```bash
+  mysql
   ```
+  Run the SQL command in the STIG's Fix Text section:
+  ```sql
+  SELECT user, max_user_connections FROM mysql.user;
+  ```
+  ![image](https://github.com/user-attachments/assets/53984015-72ca-42c1-baa2-28e9a9470e3c)
+
+  Can you remediate this finding?
+  ![image](https://github.com/user-attachments/assets/a9410577-7250-421c-acdf-00cc7f54a3f0)
 
 - Check and remediate `v-253677 STIG`
   - What is the problem?
