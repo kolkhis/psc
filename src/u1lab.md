@@ -75,7 +75,7 @@ ss -ntulp | grep 3306
 ```
 
 - Check and remediate v-253666 STIG.
-![image](https://github.com/user-attachments/assets/e882e555-773f-43c2-b6df-a12fe34e64eb)
+  ![image](https://github.com/user-attachments/assets/e882e555-773f-43c2-b6df-a12fe34e64eb)
 
   - What is the problem?
   - What is the fix?
