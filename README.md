@@ -1,6 +1,6 @@
 ## 🚧 Currently Under Development 🚧
 
-# The Professional Linux Users Group (ProLUG) Systems Administration Course Book
+# The Professional Linux Users Group (ProLUG) Systems Security Course Book
 
 ## Goals
 
