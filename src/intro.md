@@ -11,14 +11,21 @@ Welcome to the ProLUG Security Engineering Course Book.
 
 Contains all materials pertaining to the course including links to external resources.
 It has been put together with care by a number of ProLUG group members referencing original
-instructional materials produce by Scott Champine (Het Tanis). The content is version
-controlled with Git and stored - [ProLUG Security Course (PSC) Repository](https://github.com/ProfessionalLinuxUsersGroup/psc/)
+instructional materials produce by Scott Champine (Het Tanis).
+
+The content is version controlled with Git and stored here: <https://github.com/ProfessionalLinuxUsersGroup/psc/>
 
 Furthermore, the book has been built with mdbook for ease of navigation. Be sure to try the search functionality.
 
 ## This Course
 
-This course addresses how to secure Linux a corporate environment. This course will focus on adhering to regulations, best practices, and industry standards. This course will expose the concepts of controls, their implementation, and how they fit into overall security posture. The learner will practice securely building, deploying, integrating, and monitoring Linux systems. Standard security documentation and reporting will be practiced throughout, to better prepare the learner for the industry.
+This course addresses how to secure Linux a corporate environment. This course
+will focus on adhering to regulations, best practices, and industry standards.
+
+This course will expose the concepts of controls, their implementation, and how
+they fit into overall security posture. The learner will practice securely building,
+deploying, integrating, and monitoring Linux systems. Standard security documentation
+and reporting will be practiced throughout to better prepare the learner for the industry.
 
 ## Major Instructional Areas
 
@@ -32,49 +39,57 @@ This course addresses how to secure Linux a corporate environment. This course w
 - Configuration drift and Remediation.
 - Certificate and Key Madness.
 
-
 ## Course objectives
-
 
 - Build and configure a Linux system to adhere to compliance frameworks.
 - Integrating Linux to a network in a secure fashion.
-- Integrating Linux with Enterprise Identity and Access (IAM) frameworks.
+- Integrating Linux with Enterprise Identity and Access Management (IAM) frameworks.
 - Implement User ingress controls to a system/network with bastion frameworks.
 - Updating Linux to resolve security vulnerabilities and reporting out to security teams.
 - Design logging workflows to move event logging off of systems for real time monitoring.
 - Monitoring and alerting on events in Linux.
-- Maintaining system configuration and remediating drift.
-
+- Maintaining system configuration drift and remediation.
 
 ## Instructional Methods
 
-This course is designed to promote learner-centered activities and support the development of
-fundamental Linux skills. The course utilizes individual and group learning activities, performance-
-driven assignments, problem-based cases, projects, and discussions. These methods focus on building
-engaging learning experiences conducive to development of critical knowledge and skills that can be
-effectively applied in professional contexts.
+This course is designed to promote learner-centered activities and support the
+development of fundamental Linux Security skills. The course utilizes individual
+and group learning activities, performance-driven assignments, problem-based cases,
+projects, and discussions.
+
+These methods focus on building engaging learning experiences conducive to development
+of critical knowledge and skills that can be effectively applied in professional contexts.
 
 ## External resources
 
-### Course Calendar
+#### Course Calendar
 
-[Link to Discord Course Calendar](https://discord.gg/brkZ5tQ8?event=1334344976527790101)
+<https://discord.com/events/611027490848374811/1353330418669326407>
 
-### Written Discussions
+#### Written Discussions
 
-Are assigned as 'Discussion Posts' within each unit. Discussions generally take place within the Discord Server under #ProLUG Projects. More specifically, each unit will contain links to particular discussion posts within #ProLUG Projects.
+Are assigned as 'Discussion Posts' within each unit. Discussions generally take place
+within the Discord Server under #prolug-projects. More specifically, each unit will
+contain links to particular discussion posts within #prolug-projects.
 
-## Completing the course
+#### Completing the course
 
-In order to complete this course, one must attend lectures, participate in group discussions and complete provided labs. Additionally, students are to propose and complete a capstone project involving skills learned from the course.
+In order to complete this course students must participate in group discussions and
+complete provided labs. Additionally, students are to propose and complete a final
+project involving skills learned from the course.
 
-## Recommended extras
+#### Recommended Tools, Resources, and Frameworks
 
-[Link to Killercoda](https://killercoda.com/)
+- Killercoda: <https://killercoda.com/>
+- STIG Resources: <https://public.cyber.mil/stigs/srg-stig-tools/>
+  - Recommended STIG Viewer: v2.x but not v3.x
+- NIST: <https://www.nist.gov/>
+- Open Worldwide Application Security Project Top 10: <https://owasp.org/www-project-top-ten/>
+- CIS Controls and Benchmarks: <https://www.cisecurity.org/cis-benchmarks>
 
 ## Required Resources
 
-### Option #1 (Killercoda Machine)
+#### Option #1 (Killercoda Machine)
 
 Cloud Lab server running Ubuntu on Killercoda.
 Minimal resources can accomplish our tasks
@@ -84,7 +99,7 @@ Minimal resources can accomplish our tasks
 - 30 GB Hard Drive
 - Network Interface (IP already setup)
 
-### Option #2 (Home Lab)
+#### Option #2 (Home Lab)
 
 Local VM server running: RHEL, Fedora, Rocky
 Minimal resources
@@ -94,9 +109,9 @@ Minimal resources
 - 3 3-5GB Hard Drives
 - Network Interface (Bridged)
 
-### Option #3 (ProLUG Remote Lab)
+#### Option #3 (ProLUG Remote Lab)
 
-ProLUG Lab access to Rocky 9.3 instance.
+ProLUG Lab access to Rocky 9.5 instance.
 Minimal resources can accomplish our tasks
 
 - 1 CPU
@@ -107,4 +122,7 @@ Minimal resources can accomplish our tasks
 
 ## Suggested Learning Approach
 
-In this course, you will be studying individually and within a group of your peers, primarily in a lab environment. As you work on the course deliverables, you are encouraged to share ideas with your peers and instructor, work collaboratively on projects and team assignments, raise critical questions, and provide constructive feedback.
+In this course, you will be studying individually and within a group of your peers,
+primarily in a lab environment. As you work on the course deliverables, you are
+encouraged to share ideas with your peers and instructor, work collaboratively on
+projects and team assignments, raise questions, and provide constructive feedback.

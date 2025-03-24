@@ -4,30 +4,37 @@
 <div class="flex-container">
         <img src="https://github.com/ProfessionalLinuxUsersGroup/img/blob/main/Assets/Logos/ProLUG_Round_Transparent_LOGO.png?raw=true" width="64" height="64">
     <p>
-        <h1>Unit 1 Worksheet - Linux Fundamentals and Systems Editing Tools</h1>
+        <h1>Unit 1 Worksheet - Security Frameworks and Tools</h1>
     </p>
 </div>
 
-Welcome to Unit 1 of the Professional Linux Users Group (ProLUG) Systems Administration Course.
-With this worksheet students will explore the foundations of Linux and its many constituent parts.
+Welcome to Unit 1 of the Professional Linux Users Group (ProLUG) Systems Security Course.
+With this worksheet students will begin to explore the basics of Linux Systems Security.
 
-Specifically, this unit and worksheet aim to cover concepts such as the command line interface (CLI),
-commands and syntax, command line tools, Vim (visual editor improved), the Linux Kernel, and much more.
-
-Students are strongly encouraged to learn from these units and apply what they learn. Applying what you
-learn offers no better teacher. Again welcome, and good luck in your studies.
+Specifically, this unit and worksheet aim to cover concepts such as security frameworks,
+systems security benchmarks and controls, and Security Technical Implementation Guides
+(STIGS).
 
 ### Resources / Important Links
 
-- [https://public.cyber.mil/stigs/downloads](https://public.cyber.mil/stigs/downloads/)
-- [https://excalidraw.com](https://excalidraw.com/)
-- [https://www.open-scap.org](https://www.open-scap.org/)
-- [https://www.sans.org/information-security-policy](https://www.sans.org/information-security-policy/)
-- [https://www.sans.org/blog/the-ultimate-list-of-sans-cheat-sheets](https://www.sans.org/blog/the-ultimate-list-of-sans-cheat-sheets/)
+- <https://public.cyber.mil/stigs/downloads>
+- <https://excalidraw.com>
+- <https://www.open-scap.org>
+- <https://www.sans.org/information-security-policy>
+- <https://www.sans.org/blog/the-ultimate-list-of-sans-cheat-sheets>
 
 ### Unit 1 Recording
 
-- TODO -> Add Recording
+<iframe
+    style="width: 100%; height: 100%; border: none;
+    aspect-ratio: 16/9; border-radius: 1rem; background:black"
+    src="https://www.youtube.com/embed/F6loIx9WwGM"
+    title="Unit 1 Recording - ProLUG Linux Security Engineering Course - Free in Discord"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen>
+</iframe>
 
 ## Instructions
 
@@ -60,6 +67,7 @@ Find a STIG or compliance requirement that you do not agree is necessary for a s
 3. Defend why you think it is not necessary. (What type of defenses do you think you could present?)
 
 <div class="warning">
+
 Submit your input by following the link below.
 
 The discussion posts are done in Discord threads. Click the 'Threads' icon on the top right and search for the discussion post.
