@@ -8,18 +8,23 @@
     </p>
 </div>
 
-Students are expected to complete a capstone project to turn in at the end of the
-course.
+Students wishing to complete the Security Engineering course are expected to devise 
+and complete a capstone project, to be turned in at the end of the course.
+
+The instructions, expectations, and deliverables for the project are listed on this
+page.  
 
 ## Instructions
 
 1. We have picked up a new client. They are requesting we help them adhere to the HIPAA
    compliance standard. Review an explanation of the standard here:  
    <https://www.hhs.gov/hipaa/for-professionals/security/laws-regulations/index.html>
+
    - If you are in the EU and want to substitute GDPR, you may do so.  
      <https://gdpr.eu/what-is-gdpr/>
 
 2. Build the documentation for HIPAA Compliance.
+
    - How are we implementing Risk analysis and management?
    - What are our safeguards?
      1. Administrative
@@ -31,13 +36,15 @@ course.
      2. Procedures
      3. Update and review cadence
 
-3. Prepare to Present (https://www.overleaf.com/ is a great alternative to Powerpoint)
+3. Prepare to Present (<https://www.overleaf.com/> is a great alternative to Powerpoint)
+
    - Setup a 15-20 slide deck on what you did
      1. Project purpose
      2. Diagram
      3. Build Process
      4. What did you learn?
      5. How are you going to apply this?
+
 4. Do any of you want to present?
    - Let Scott know (@het_tanis) and we’ll get you a slot in the last few weeks.
 
@@ -45,3 +52,5 @@ course.
 
 1. A 15-20 slide presentation of the above material that you would present to a group
    (presenting to us is voluntary, but definitely possible.)
+   - This can be done with Microsoft PowerPoint, LibreOffice Impress, or
+     [overleaf.com](https://overleaf.com).
