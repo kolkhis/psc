@@ -80,21 +80,21 @@ The discussion posts are done in Discord threads. Click the 'Threads' icon on th
 
 ---
 
-CIA Triad
+CIA Triad:
 
-Regulatory Compliance
+Regulatory Compliance:
 
-HIPAA
+HIPAA:
 
-Industry Standards
+Industry Standards:
 
-PCI/DSS
+PCI/DSS:
 
-Security Frameworks
+Security Frameworks:
 
-CIS
+CIS:
 
-STIG
+STIG:
 
 ## Digging Deeper
 
