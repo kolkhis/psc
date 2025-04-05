@@ -60,18 +60,11 @@ in the Linux Administration Course including:
 
 ## Key terms and Definitions
 
-CIA Triad:
-
-Regulatory Compliance:
-
-HIPAA:
-
-Industry Standards:
-
-PCI/DSS:
-
-Security Frameworks:
-
-CIS:
-
-STIG:
+CIA Triad  
+Regulatory Compliance  
+HIPAA  
+Industry Standards  
+PCI/DSS  
+Security Frameworks  
+CIS  
+STIG
