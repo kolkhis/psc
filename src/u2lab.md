@@ -40,11 +40,11 @@ cat /proc/cmdline
 fips-mode-setup --check
 sestatus
 cat /etc/selinux/config
-
-# What information about the security posture of the system can you see here?
-# Can you verify SELINUX status?
-# Can you verify FIPS status?
 ```
+
+What information about the security posture of the system can you see here?  
+Can you verify SELINUX status?  
+Can you verify FIPS status?
 
 Download the STIG Viewer 2.18 from - <https://public.cyber.mil/stigs/downloads/>
 

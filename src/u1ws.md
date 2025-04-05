@@ -8,12 +8,12 @@
     </p>
 </div>
 
-Welcome to Unit 1 of the Professional Linux Users Group (ProLUG) Systems Security Course.
-With this worksheet students will begin to explore the basics of Linux Systems Security.
+## Instructions
 
-Specifically, this unit and worksheet aim to cover concepts such as security frameworks,
-systems security benchmarks and controls, and Security Technical Implementation Guides
-(STIGS).
+---
+
+Fill out this sheet as you progress through the lab and discussions. Hold your worksheets until
+the end to turn them in as a final submission packet.
 
 ### Resources / Important Links
 
@@ -35,20 +35,6 @@ systems security benchmarks and controls, and Security Technical Implementation 
     referrerpolicy="strict-origin-when-cross-origin"
     allowfullscreen>
 </iframe>
-
-## Instructions
-
----
-
-A major aspect of this course is to intake, comprehend, and discuss the assigned
-topics. Take the time to fully absorb each topic and contribute to the discussion
-thread by sharing your thoughts. Interaction with peers is also expected; the goal is
-to compare and contrast ideas to build a solid foundation of knowledge.
-
-Fill out this worksheet as you watch the unit video.
-Discussion posts can be completed afterwards, answers to be posted in Discord.
-You must both answer the discussion questions and respond to another student's
-answers. This is only required if you want the certification.
 
 #### Discussion Post #1
 
