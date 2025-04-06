@@ -23,6 +23,15 @@ the end to turn them in as a final submission packet.
 - <https://www.sans.org/information-security-policy>
 - <https://www.sans.org/blog/the-ultimate-list-of-sans-cheat-sheets>
 
+#### Downloads
+
+The worksheet has been provided below. The document(s) can be transposed to
+the desired format so long as the content is preserved. For example, the `.txt`
+could be transposed to a `.md` file.
+
+- <a href="./assets/downloads/u1/u1_worksheet.txt" target="_blank" download>📥 u1_worksheet(`.txt`)</a>
+- <a href="./assets/downloads/u1/u1_worksheet.docx" target="_blank" download>📥 u1_worksheet(`.docx`)</a>
+
 ### Unit 1 Recording
 
 <iframe

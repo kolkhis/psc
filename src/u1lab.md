@@ -5,6 +5,23 @@
     </p>
 </div>
 
+### Required Materials
+
+Putty or other connection tool Lab Server
+
+Root or sudo command access
+
+STIG Viewer 2.18 (download from <https://public.cyber.mil/stigs/downloads/> )
+
+#### Downloads
+
+The lab has been provided below. The document(s) can be transposed to
+the desired format so long as the content is preserved. For example, the `.txt`
+could be transposed to a `.md` file.
+
+- <a href="./assets/downloads/u1/u1_lab.txt" target="_blank" download>📥 u1_lab(`.txt`)</a>
+- <a href="./assets/downloads/u1/u1_lab.docx" target="_blank" download>📥 u1_lab(`.docx`)</a>
+
 ## Module 1: Exploring System Information
 
 ### Exercise 1.1: Familiarizing ourselves with the System
@@ -44,11 +61,12 @@ lsmod | grep -i tables
 ## Module 2: PreLAB
 
 1. Download the STIG Viewer 2.18 from - <https://public.cyber.mil/stigs/downloads/>
-<!-- TODO: Host these screenshots locally -->
-![image](https://github.com/user-attachments/assets/718b0c53-9bcc-4782-a2fb-bfc8b684bad7)
+   <!-- TODO: Host these screenshots locally -->
+
+   ![image](https://github.com/user-attachments/assets/718b0c53-9bcc-4782-a2fb-bfc8b684bad7)
 
 2. Download the STIG for Mariadb and the import it into your STIG viewer.
-![image](https://github.com/user-attachments/assets/8c6e9b50-3c7e-4670-8092-83a2ae152ae2)
+   ![image](https://github.com/user-attachments/assets/8c6e9b50-3c7e-4670-8092-83a2ae152ae2)
 
 ## Module 3: Lab
 
@@ -83,13 +101,17 @@ ss -ntulp | grep 3306
   - Is it set properly on your system?
 
   Connect to MariaDB locally.
+
   ```bash
   mysql
   ```
+
   Run the SQL command in the STIG's Fix Text section:
+
   ```sql
   SELECT user, max_user_connections FROM mysql.user;
   ```
+
   ![image](https://github.com/user-attachments/assets/53984015-72ca-42c1-baa2-28e9a9470e3c)
 
   Can you remediate this finding?
