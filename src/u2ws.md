@@ -26,8 +26,6 @@ To qualify for the ProLUG certification download, fill out, and save the desired
 
 ### Unit 2 Recording
 
-<img src="./assets/images/under-construction.jpg" style="border-radius:2%"></img>
-
 <iframe
     style="width: 100%; height: 100%; border: none;
     aspect-ratio: 16/9; border-radius: 1rem; background:black"
