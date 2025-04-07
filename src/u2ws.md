@@ -20,17 +20,24 @@ the end to turn them in as a final submission packet.
 - <https://ciq.com/blog/demystifying-and-troubleshooting-name-resolution-in-rocky-linux/>
 - <https://www.activeresponse.org/wp-content/uploads/2013/07/diamond.pdf>
 
-To qualify for the ProLUG certification download, fill out, and save the desired worksheet format:
+#### Downloads
 
+The worksheet has been provided below. The document(s) can be transposed to
+the desired format so long as the content is preserved. For example, the `.txt`
+could be transposed to a `.md` file.
+
+- <a href="./assets/downloads/u2/u2_worksheet.txt" target="_blank" download>📥 u2_worksheet(`.txt`)</a>
 - <a href="./assets/downloads/u2/u2_worksheet.docx" target="_blank" download>📥 u2_worksheet(`.docx`)</a>
 
 ### Unit 2 Recording
 
+<!-- <img src="./assets/images/under-construction.jpg" style="border-radius:2%"></img> -->
+
 <iframe
     style="width: 100%; height: 100%; border: none;
     aspect-ratio: 16/9; border-radius: 1rem; background:black"
-    src="https://www.youtube.com/embed/x1kgXOWv-eM?si=wg8zyFEoiJq1wSfT"
-    title="Security Engineering Unit 2"
+    src="https://www.youtube.com/embed/x1kgXOWv-eM"
+    title="Unit 2 Recording - ProLUG Linux Security Engineering Course - Free in Discord"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     referrerpolicy="strict-origin-when-cross-origin"

@@ -11,10 +11,15 @@ Putty or other connection tool Lab Server
 
 Root or sudo command access
 
-STIG Viewer 2.18 (download from https://public.cyber.mil/stigs/downloads/ )
+STIG Viewer 2.18 (download from <https://public.cyber.mil/stigs/downloads/> )
 
-To qualify for the ProLUG certification download, fill out, and save the lab worksheet:
+#### Downloads
 
+The lab has been provided below. The document(s) can be transposed to
+the desired format so long as the content is preserved. For example, the `.txt`
+could be transposed to a `.md` file.
+
+- <a href="./assets/downloads/u2/u2_lab.txt" target="_blank" download>📥 u2_lab(`.txt`)</a>
 - <a href="./assets/downloads/u2/u2_lab.docx" target="_blank" download>📥 u2_lab(`.docx`)</a>
 
 ## Pre-Lab Warm-Up
@@ -134,11 +139,11 @@ the port that node_exporter runs on to the network outside of your system.
 systemctl status firewalld
 
 # Verify that your firewall has the service defined
-firewall-cmd –get-services | grep -i node
+firewall-cmd --get-services | grep -i node
 ls /usr/lib/firewalld/services | grep -i node
 
 # Verify that the service is not currently enabled for node_exporter
-fireall-cmd –list-services
+firewall-cmd --list-services
 
 # Examine the structure of the firewall .xml file
 cat /usr/lib/firewalld/services/prometheus-node-exporter.xml
@@ -160,10 +165,14 @@ focused Linux engineer, the trade-off between security and productivity.
 #### Download and extract a STIG remediation tool
 
 ```bash
-cd /root mkdir stigs cd stigs
-wget -O U_RHEL_9_V2R3_STIG_Ansible.zip https://dl.dod.cyber.mil/wp- content/uploads/stigs/zip/U_RHEL_9_V2R3_STIG_Ansible.zip
-unzip U_RHEL_9_V2R3_STIG_Ansible.zip mkdir ansible
-cp rhel9STIG-ansible.zip ansible/ cd ansible
+cd /root
+mkdir stigs
+cd stigs
+wget -O U_RHEL_9_V2R3_STIG_Ansible.zip https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_RHEL_9_V2R3_STIG_Ansible.zip
+unzip U_RHEL_9_V2R3_STIG_Ansible.zip
+mkdir ansible
+cp rhel9STIG-ansible.zip ansible/
+cd ansible
 unzip rhel9STIG-ansible.zip
 ```
 
@@ -190,17 +199,18 @@ vim /root/stigs/ansible/roles/rhel9STIG/tasks/main.yml
 
 ```bash
 dnf -y install openscap-scanner openscap-utils openscap-scanner scap-security-guide
+cd /root
+mkdir openscap
+cd openscap
 
 # Generate the Ansible
-oscap xccdf generate fix --profile ospp --fix-type ansible
-/usr/share/xml/scap/ssg/content/ssg-rhel9-ds.xml > draft-disa- remediate.yml
+oscap xccdf generate fix --profile ospp --fix-type ansible /usr/share/xml/scap/ssg/content/ssg-rhel9-ds.xml > draft-disa-remediate.yml
 
 # Examine the file
 vim draft-disa-remediate.yml
 
 # Generate a BASH version
-oscap xccdf generate fix --profile ospp --fix-type bash
-/usr/share/xml/scap/ssg/content/ssg-rhel9-ds.xml > draft-disa- remediate.sh
+oscap xccdf generate fix --profile ospp --fix-type bash /usr/share/xml/scap/ssg/content/ssg-rhel9-ds.xml > draft-disa-remediate.sh
 
 # Examine the file
 vim draf-disa-remediate.sh
