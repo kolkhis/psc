@@ -28,7 +28,7 @@ Below is the current workflow that deploys the Git Page for the course:
 
 <div style="text-align: center;">
 
-<img src="./assets/images/workflow.png"></img>
+<img src="./assets/images/workflow.png" style="border-radius:2%"></img>
 
 </div>
 
@@ -60,7 +60,7 @@ environments if things go awry.
 <https://github.com/ProfessionalLinuxUsersGroup/psc/blob/main/src/assets/deploy/ansible-playbook.yml>
 
 To use this playbook, your machine(s)/containers must be configured correctly for Ansible.
-If you don't know the requirements to administer and Ansible machine, documentation
+If you don't know the requirements to administer a machine via Ansible, documentation
 has been provided below.
 
 <div class = warning>
@@ -79,7 +79,7 @@ Export and execute this script to your machine/container.
 
 <div class=warning>
 
-Dependencies can total over ~500MB compressed and 2GB unpackaged or more.
+Dependencies can total over ~500MB compressed and 1-2GB unpackaged or more.
 
 Debian containers/machines will require building many of these packages from
 source or adding additional repositories as Debian has a far slower package
@@ -138,16 +138,19 @@ From there you should be able to see any changes you have made are reflected.
 
 #### Or send commands over to a networked container or machine:
 
+**Note:** To minimize complexity and given the nature of commands over SSH, these
+commands will need to utilize absolute paths.
+
 ```bash
 scp {working directory}/{targeted document} {TARGET_IP}:/root/psc/src/{targeted document}
-ssh {TARGET_IP} "cd ~/psc && ~/.cargo/bin/mdbook build -d /var/www/html && systemctl restart httpd"
+ssh {TARGET_IP} "cd /root/psc && ~/.cargo/bin/mdbook build -d /var/www/html && systemctl restart httpd"
 ```
 
 An example of the workflow after making changes:
 
 ```bash
 scp src/development.md 172.16.15.8:/root/psc/src/
-ssh 172.16.15.8 "cd ~/psc && ~/.cargo/bin/mdbook build -d /var/www/html && systemctl restart httpd"
+ssh 172.16.15.8 "cd /root/psc && ~/.cargo/bin/mdbook build -d /var/www/html && systemctl restart httpd"
 ```
 
 <img src="./assets/images/flow.png"></img>
