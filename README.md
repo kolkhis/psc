@@ -2,6 +2,8 @@
 
 # The Professional Linux Users Group (ProLUG) Systems Security Course Book
 
+Current deployment: <https://professionallinuxusersgroup.github.io/psc/>
+
 ## Goals
 
 The overarching goal of this project is to provide a free, open source Systems Administration course
