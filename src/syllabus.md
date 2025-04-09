@@ -62,9 +62,24 @@ of critical knowledge and skills that can be effectively applied in professional
 
 ## External resources
 
-#### Course Calendar
+#### Class Schedule
 
 <https://discord.com/events/611027490848374811/1353330418669326407>
+
+Class will meet over weekend (Brown bag) sessions. 1 time per week, for 10 weeks. There will be a total of 10 sessions.
+
+| Session |              Topic               |
+| :-----: | :------------------------------: |
+|    1    |     Standards and Compliance     |
+|    2    | Network Standards and Compliance |
+|    3    |                                  |
+|    4    |                                  |
+|    5    |                                  |
+|    6    |                                  |
+|    7    |                                  |
+|    8    |                                  |
+|    9    |                                  |
+|   10    |                                  |
 
 #### Written Discussions
 
@@ -111,7 +126,7 @@ Minimal resources
 
 #### Option #3 (ProLUG Remote Lab)
 
-ProLUG Lab access to Rocky 9.5 instance.
+ProLUG Lab access to Rocky 9.4+ instance.
 Minimal resources can accomplish our tasks
 
 - 1 CPU
