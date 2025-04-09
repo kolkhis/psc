@@ -62,11 +62,10 @@ lsmod | grep -i tables
 
 1. Download the STIG Viewer 2.18 from - <https://public.cyber.mil/stigs/downloads/>
    <!-- TODO: Host these screenshots locally -->
-
-   ![image](https://github.com/user-attachments/assets/718b0c53-9bcc-4782-a2fb-bfc8b684bad7)
+   <img src='./assets/images/u1/mod2_prelab1.png' />
 
 2. Download the STIG for Mariadb and the import it into your STIG viewer.
-   ![image](https://github.com/user-attachments/assets/8c6e9b50-3c7e-4670-8092-83a2ae152ae2)
+   <img src='./assets/images/u1/mod2_prelab1.png' />
 
 ## Module 3: Lab
 
