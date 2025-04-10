@@ -78,6 +78,10 @@ In order to complete this course students must participate in group discussions 
 complete provided labs. Additionally, students are to propose and complete a final
 project involving skills learned from the course.
 
+<div class="warning">
+Note: If any lab download does not work, check the `/labs` folder on the server for a `<course>_<unit#>` .zip to complete the activities.
+</div>
+
 #### Recommended Tools, Resources, and Frameworks
 
 - Killercoda: <https://killercoda.com/>

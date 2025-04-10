@@ -164,12 +164,16 @@ focused Linux engineer, the trade-off between security and productivity.
 
 #### Download and extract a STIG remediation tool
 
+<div class="warning">
+Note: If any lab download does not work, check the `/labs` folder on the server for a `<course>_<unit#>.zip` to complete the activities.
+</div>
+
 ```bash
 cd /root
 mkdir stigs
 cd stigs
-wget -O U_RHEL_9_V2R3_STIG_Ansible.zip https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_RHEL_9_V2R3_STIG_Ansible.zip
-unzip U_RHEL_9_V2R3_STIG_Ansible.zip
+wget -O U_RHEL_9_V2R4_STIG_Ansible.zip https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_RHEL_9_V2R4_STIG_Ansible.zip
+unzip U_RHEL_9_V2R4_STIG_Ansible.zip
 mkdir ansible
 cp rhel9STIG-ansible.zip ansible/
 cd ansible
