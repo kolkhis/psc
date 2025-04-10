@@ -149,7 +149,10 @@ firewall-cmd --list-services
 cat /usr/lib/firewalld/services/prometheus-node-exporter.xml
 
 # Enable the service through your firewall
-firewall-cmd --permanent --add-service=prometheus-node-exporter firewall-cmd –reload
+firewall-cmd --permanent --add-service=prometheus-node-exporter 
+
+# Reload so the changes take effect
+firewall-cmd --reload
 
 # Verify that the service is currently enabled for node_exporter
 firewall-cmd --list-services
