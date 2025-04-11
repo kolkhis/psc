@@ -1,7 +1,7 @@
 <div class="flex-container">
         <img src="https://github.com/ProfessionalLinuxUsersGroup/img/blob/main/Assets/Logos/ProLUG_Round_Transparent_LOGO.png?raw=true" width="64" height="64"></img>
     <p>
-        <h1>Unit 2 Lab - Network Standards and Compliance</h1>
+        <h1>Unit 2 Lab - Securing the Network Connection</h1>
     </p>
 </div>
 
@@ -149,7 +149,7 @@ firewall-cmd --list-services
 cat /usr/lib/firewalld/services/prometheus-node-exporter.xml
 
 # Enable the service through your firewall
-firewall-cmd --permanent --add-service=prometheus-node-exporter 
+firewall-cmd --permanent --add-service=prometheus-node-exporter
 
 # Reload so the changes take effect
 firewall-cmd --reload
