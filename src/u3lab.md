@@ -8,8 +8,11 @@
 ### Required Materials
 
 Putty or other connection tool Lab Server  
-Root or sudo command access  
+Root or sudo command access
+
 STIG Viewer 2.18 (download from https://public.cyber.mil/stigs/downloads/ )
+Download the STIG for RHEL 9 and the import it into your STIG viewer
+Create a checklist from the opened STIG for RHEL 9
 
 #### Downloads
 
@@ -152,26 +155,37 @@ firewall-cmd --list-all
 
 #### Generate a password (use `testpassword`)
 
-[root@hammer1 ~]# `slappasswd`  
+[root@hammer1 ~]# `slappasswd`
+
+Output:
+
+<blockquote>
+
 New password:  
 Re-enter new password:  
 {SSHA}wpRvODvIC/EPYf2GqHUlQMDdsFIW5yig
 
+</blockquote>
+
 #### Change the password
 
-`vi changerootpass.ldif`
+[root@hammer1 ~]# `vi changerootpass.ldif`
 
-dn: olcDatabase={0}config,cn=config  
-changetype: modify  
-replace: olcRootPW  
+```yaml
+dn: olcDatabase={0}config,cn=config
+changetype: modify
+replace: olcRootPW
 olcRootPW: {SSHA}vKobSZO1HDGxp2OElzli/xfAzY4jSDMZ
+```
 
 [root@hammer1 ~]# `ldapadd -Y EXTERNAL -H ldapi:/// -f changerootpass.ldif `
 
-SASL/EXTERNAL authentication started  
-SASL username: gidNumber=0+uidNumber=0,cn=peercred,cn=external,cn=auth  
-SASL SSF: 0  
+```yaml
+SASL/EXTERNAL authentication started
+SASL username: gidNumber=0+uidNumber=0,cn=peercred,cn=external,cn=auth
+SASL SSF: 0
 modifying entry "olcDatabase={0}config,cn=config"
+```
 
 #### Generate basic schemas
 
@@ -183,7 +197,7 @@ ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/openldap/schema/inetorgperson.ldif
 
 #### Set up the domain (USE THE PASSWORD YOU GENERATED EARLIER)
 
-`vi setdomain.ldif`
+[root@hammer1 ~]# `vi setdomain.ldif`
 
 ```yaml
 dn: olcDatabase={1}monitor,cn=config
@@ -220,6 +234,10 @@ olcAccess: {2}to * by dn="cn=Manager,dc=prolug,dc=lan" write by * read
 
 [root@hammer1 ~]# `ldapmodify -Y EXTERNAL -H ldapi:/// -f setdomain.ldif`
 
+Output:
+
+<blockquote>
+
 SASL/EXTERNAL authentication started  
 SASL username: gidNumber=0+uidNumber=0,cn=peercred,cn=external,cn=auth  
 SASL SSF: 0  
@@ -229,16 +247,24 @@ modifying entry "olcDatabase={2}mdb,cn=config"
 modifying entry "olcDatabase={2}mdb,cn=config"  
 modifying entry "olcDatabase={2}mdb,cn=config"
 
+</blockquote>
+
 #### Search and verify the domain is working.
 
 [root@hammer1 ~]# `ldapsearch -H ldap:// -x -s base -b "" -LLL "namingContexts"`
 
+Output:
+
+<blockquote>
+
 dn:  
 namingContexts: dc=prolug,dc=lan
 
+</blockquote>
+
 #### Add the base group and organization.
 
-`vi addou.ldif`
+[root@hammer1 ~]# `vi addou.ldif`
 
 ```yaml
 dn: dc=prolug,dc=lan
@@ -274,7 +300,7 @@ ou: Group
 Generate a password  
 `slappasswd` (use testuser1234)
 
-`vi adduser.ldif`
+[root@hammer1 ~]# `vi adduser.ldif`
 
 ```yaml
 dn: uid=testuser,ou=People,dc=prolug,dc=lan
@@ -291,9 +317,7 @@ homeDirectory: /home/testuser
 shadowLastChange: 0
 shadowMax: 0
 shadowWarning: 0
-```
 
-```yaml
 dn: cn=testuser,ou=Group,dc=prolug,dc=lan
 objectClass: posixGroup
 cn: testuser
@@ -314,12 +338,18 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/pki/tls/ldapser
 chown ldap:ldap /etc/pki/tls/{ldapserver.crt,ldapserver.key}
 ```
 
-[root@hammer1 tls]# `ls -l /etc/pki/tls/ldap*`
+[root@hammer1 ~]# `ls -l /etc/pki/tls/ldap*`
+
+Output:
+
+<blockquote>
 
 -rw-r--r--. 1 ldap ldap 1224 Apr 12 18:23 /etc/pki/tls/ldapserver.crt  
 -rw-------. 1 ldap ldap 1704 Apr 12 18:22 /etc/pki/tls/ldapserver.key
 
-`vi tls.ldif`
+</blockquote>
+
+[root@hammer1 ~]# `vi tls.ldif`
 
 ```yaml
 dn: cn=config
@@ -338,7 +368,7 @@ olcTLSCertificateFile: /etc/pki/tls/ldapserver.crt
 
 #### Fix the /etc/openldap/ldap.conf to allow for certs
 
-`vi /etc/openldap/ldap.conf`
+[root@hammer1 ~]# `vi /etc/openldap/ldap.conf`
 
 ```bash
 #
@@ -389,14 +419,20 @@ systemctl status oddjobd.service
 
 #### Uncomment and fix the lines in /etc/openldap/ldap.conf
 
-`vi /etc/openldap/ldap.conf`
+[root@hammer1 ~]# `vi /etc/openldap/ldap.conf`
+
+Output:
+
+<blockquote>
 
 BASE dc=prolug,dc=lan  
 URI ldap://ldap.ldap.lan/
 
+</blockquote>
+
 #### Edit the sssd.conf file
 
-`vi /etc/sssd/sssd.conf`
+[root@hammer1 ~]# `vi /etc/sssd/sssd.conf`
 
 ```yaml
 [domain/default]
@@ -429,4 +465,10 @@ systemctl status sssd
 
 `id testuser`
 
+Output:
+
+<blockquote>
+
 uid=15000(testuser) gid=15000 groups=15000
+
+</blockquote>
