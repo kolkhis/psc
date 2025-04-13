@@ -1,7 +1,7 @@
 <div class="flex-container">
         <img src="https://github.com/ProfessionalLinuxUsersGroup/img/blob/main/Assets/Logos/ProLUG_Round_Transparent_LOGO.png?raw=true" width="64" height="64"></img>
     <p>
-        <h1>Unit 2 Worksheet - Securing the Network Connection</h1>
+        <h1>Unit 3 Worksheet - User Access and System Integration</h1>
     </p>
 </div>
 
@@ -30,20 +30,20 @@ could be transposed to a `.md` file.
 - <a href="./assets/downloads/u3/u3_worksheet.txt" target="_blank" download>📥 u3_worksheet(`.txt`)</a>
 <!-- - <a href="./assets/downloads/u3/u3_worksheet.docx" target="_blank" download>📥 u3_worksheet(`.docx`)</a> -->
 
-### Unit 2 Recording
+### Unit 3 Recording
 
-<img src="./assets/images/under-construction.jpg" style="border-radius:2%"></img>
+<!-- <img src="./assets/images/under-construction.jpg" style="border-radius:2%"></img> -->
 
-<!-- <iframe -->
-<!--     style="width: 100%; height: 100%; border: none; -->
-<!--     aspect-ratio: 16/9; border-radius: 1rem; background:black" -->
-<!--     src="" -->
-<!--     title="" -->
-<!--     frameborder="0" -->
-<!--     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" -->
-<!--     referrerpolicy="strict-origin-when-cross-origin" -->
-<!--     allowfullscreen> -->
-<!-- </iframe> -->
+<iframe
+    style="width: 100%; height: 100%; border: none;
+    aspect-ratio: 16/9; border-radius: 1rem; background:black"
+    src="https://www.youtube.com/embed/-4FhZ2q4RSo"
+    title="Unit 3 Recording - ProLUG Linux Security Engineering Course - Free in Discord"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen>
+</iframe>
 
 #### Discussion Post #1
 
