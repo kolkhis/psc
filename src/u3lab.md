@@ -151,7 +151,7 @@ Entry for hammer1 for example:
 
 ```bash
 [root@hammer1 ~]# `systemctl start slapd`
-[root@hammer1 ~]# ss -ntulp | grep slapd`
+[root@hammer1 ~]# `ss -ntulp | grep slapd`
 ```
 
 #### 5. Allow ldap through the firewall
@@ -448,7 +448,7 @@ SASL_NOCANON on
 ```
 
 ```bash
-`systemctl restart slapd`
+[root@hammer1 ~]# `systemctl restart slapd`
 ```
 
 ### SSSD Configuration and Realmd join to LDAP
