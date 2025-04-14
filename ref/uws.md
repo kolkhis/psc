@@ -58,6 +58,7 @@ could be transposed to a `.md` file.
 2. PLACEHOLDER - Questions will be in ordered lists.
 
 <div class="warning">
+
 Submit your input by following the link below:
 
 The discussion posts are done in Discord threads. Click the 'Threads' icon on the top right and search for the discussion post.
