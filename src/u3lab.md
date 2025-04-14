@@ -10,8 +10,8 @@
 Putty or other connection tool Lab Server  
 Root or sudo command access
 
-STIG Viewer 2.18 (download from https://public.cyber.mil/stigs/downloads/ )
-Download the STIG for RHEL 9 and the import it into your STIG viewer
+STIG Viewer 2.18 (download from https://public.cyber.mil/stigs/downloads/ )  
+Download the STIG for RHEL 9 and the import it into your STIG viewer  
 Create a checklist from the opened STIG for RHEL 9
 
 #### Downloads
@@ -183,9 +183,9 @@ olcRootPW: {SSHA}vKobSZO1HDGxp2OElzli/xfAzY4jSDMZ
 Output:
 <blockquote>
 
-SASL/EXTERNAL authentication started
-SASL username: gidNumber=0+uidNumber=0,cn=peercred,cn=external,cn=auth
-SASL SSF: 0
+SASL/EXTERNAL authentication started  
+SASL username: gidNumber=0+uidNumber=0,cn=peercred,cn=external,cn=auth  
+SASL SSF: 0  
 modifying entry "olcDatabase={0}config,cn=config"
 
 </blockquote>
@@ -369,7 +369,7 @@ olcTLSCertificateFile: /etc/pki/tls/ldapserver.crt
 
 [root@hammer1 ~]# `ldapadd -Y EXTERNAL -H ldapi:/// -f tls.ldif`
 
-#### Fix the /etc/openldap/ldap.conf to allow for certs
+#### 18. Fix the /etc/openldap/ldap.conf to allow for certs
 
 [root@hammer1 ~]# `vi /etc/openldap/ldap.conf`
 
@@ -411,7 +411,7 @@ SASL_NOCANON on
 SSSD can connect a server to a trusted LDAP system and authenticate users for access to
 local resources. You will likely do this during your career and it is a valuable skill to work with.
 
-#### Install sssd, configure, and validate that the user is seen by the system
+#### 1. Install sssd, configure, and validate that the user is seen by the system
 
 ```bash
 dnf install openldap-clients sssd sssd-ldap oddjob-mkhomedir authselect
@@ -420,7 +420,7 @@ systemctl enable --now oddjobd.service
 systemctl status oddjobd.service
 ```
 
-#### Uncomment and fix the lines in /etc/openldap/ldap.conf
+#### 2. Uncomment and fix the lines in /etc/openldap/ldap.conf
 
 [root@hammer1 ~]# `vi /etc/openldap/ldap.conf`
 
@@ -433,7 +433,7 @@ URI ldap://ldap.ldap.lan/
 
 </blockquote>
 
-#### Edit the sssd.conf file
+#### 3. Edit the sssd.conf file
 
 [root@hammer1 ~]# `vi /etc/sssd/sssd.conf`
 
@@ -464,7 +464,7 @@ systemctl start sssd
 systemctl status sssd
 ```
 
-#### Validate that the user can be seen
+#### 4. Validate that the user can be seen
 
 `id testuser`
 
