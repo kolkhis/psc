@@ -116,8 +116,8 @@ To simplify some of the typing in this lab, there is a file located at
 `/lab_work/identity_and_access_management.tar.gz` that you can pull down to your system with the correct `.ldif` files.
 
 ```bash
-[root@hammer1 ~]# `cp /lab_work/identity_and_access_management.tar.gz .`
-[root@hammer1 ~]# `tar -xzvf identity_and_access_management.tar .`
+[root@hammer1 ~]# cp /lab_work/identity_and_access_management.tar.gz .
+[root@hammer1 ~]# tar -xzvf identity_and_access_management.tar 
 ```
 
 ### Install and configure OpenLDAP
@@ -125,7 +125,7 @@ To simplify some of the typing in this lab, there is a file located at
 #### 1. Stop the warewulf client
 
 ```bash
-[root@hammer1 ~]# `systemctl stop wwclient`
+[root@hammer1 ~]# systemctl stop wwclient
 ```
 
 #### 2. Edit your /etc/hosts file
@@ -133,7 +133,7 @@ To simplify some of the typing in this lab, there is a file located at
  *Look for and edit the line that has your current server*
 
 ```bash
-[root@hammer1 ~]# `vi /etc/hosts`
+[root@hammer1 ~]# vi /etc/hosts
 ```
 
 Entry for hammer1 for example:  
@@ -142,16 +142,16 @@ Entry for hammer1 for example:
 #### 3. Setup dnf repo
 
 ```bash
-[root@hammer1 ~]# `dnf config-manager --set-enabled plus`
-[root@hammer1 ~]# `dnf repolist`
-[root@hammer1 ~]# `dnf -y install openldap-servers openldap-clients openldap`
+[root@hammer1 ~]# dnf config-manager --set-enabled plus
+[root@hammer1 ~]# dnf repolist
+[root@hammer1 ~]# dnf -y install openldap-servers openldap-clients openldap
 ```
 
 #### 4. Start slapd systemctl
 
 ```bash
-[root@hammer1 ~]# `systemctl start slapd`
-[root@hammer1 ~]# `ss -ntulp | grep slapd`
+[root@hammer1 ~]# systemctl start slapd
+[root@hammer1 ~]# ss -ntulp | grep slapd
 ```
 
 #### 5. Allow ldap through the firewall
@@ -165,7 +165,7 @@ Entry for hammer1 for example:
 #### 6. Generate a password (Our example uses `testpassword`) This will return a salted SSHA password. *Save this password and stalted hash for later input*
 
 ```bash
-[root@hammer1 ~]# `slappasswd`
+[root@hammer1 ~]# slappasswd
 ```
 
 Output:
@@ -181,7 +181,7 @@ Re-enter new password:
 #### 7. Change the password
 
 ```bash
-[root@hammer1 ~]# `vi changerootpass.ldif`
+[root@hammer1 ~]# vi changerootpass.ldif
 ```
 
 ```yaml
@@ -192,7 +192,7 @@ olcRootPW: {SSHA}vKobSZO1HDGxp2OElzli/xfAzY4jSDMZ
 ```
 
 ```bash
-[root@hammer1 ~]# `ldapadd -Y EXTERNAL -H ldapi:/// -f changerootpass.ldif `
+[root@hammer1 ~]# ldapadd -Y EXTERNAL -H ldapi:/// -f changerootpass.ldif 
 ```
 
 Output:
@@ -217,7 +217,7 @@ ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/openldap/schema/inetorgperson.ldif
 #### 9. Set up the domain (USE THE PASSWORD YOU GENERATED EARLIER)
 
 ```bash
-[root@hammer1 ~]# `vi setdomain.ldif`
+[root@hammer1 ~]# vi setdomain.ldif
 ```
 
 ```yaml
@@ -254,7 +254,7 @@ olcAccess: {2}to * by dn="cn=Manager,dc=prolug,dc=lan" write by * read
 #### 10. Run it
 
 ```bash
-[root@hammer1 ~]# `ldapmodify -Y EXTERNAL -H ldapi:/// -f setdomain.ldif`
+[root@hammer1 ~]# ldapmodify -Y EXTERNAL -H ldapi:/// -f setdomain.ldif
 ```
 
 Output:
@@ -275,7 +275,7 @@ modifying entry "olcDatabase={2}mdb,cn=config"
 #### 11. Search and verify the domain is working.
 
 ```bash
-[root@hammer1 ~]# `ldapsearch -H ldap:// -x -s base -b "" -LLL "namingContexts"`
+[root@hammer1 ~]# ldapsearch -H ldap:// -x -s base -b "" -LLL "namingContexts"
 ```
 
 Output:
@@ -290,7 +290,7 @@ namingContexts: dc=prolug,dc=lan
 #### 12. Add the base group and organization.
 
 ```bash
-[root@hammer1 ~]# `vi addou.ldif`
+[root@hammer1 ~]# vi addou.ldif
 ```
 
 ```yaml
@@ -316,14 +316,14 @@ ou: Group
 ```
 
 ```bash
-[root@hammer1 ~]# `ldapadd -x -D cn=Manager,dc=prolug,dc=lan -W -f addou.ldif`
+[root@hammer1 ~]# ldapadd -x -D cn=Manager,dc=prolug,dc=lan -W -f addou.ldif
 ```
 
 #### 13. Verifying
 
 ```bash
-[root@hammer1 ~]# `ldapsearch -H ldap:// -x -s base -b "" -LLL "+"`  
-[root@hammer1 ~]# `ldapsearch -x -b "dc=prolug,dc=lan" ou`
+[root@hammer1 ~]# ldapsearch -H ldap:// -x -s base -b "" -LLL "+"  
+[root@hammer1 ~]# ldapsearch -x -b "dc=prolug,dc=lan" ou
 ```
 
 #### 14. Add a user
@@ -331,11 +331,11 @@ ou: Group
 Generate a password  (use testuser1234)
 
 ```bash
-[root@hammer1 ~]# `slappasswd` 
+[root@hammer1 ~]# slappasswd 
 ```
 
 ```bash
-[root@hammer1 ~]# `vi adduser.ldif`
+[root@hammer1 ~]# vi adduser.ldif
 ```
 
 ```yaml
@@ -362,25 +362,25 @@ memberUid: testuser
 ```
 
 ```bash
-[root@hammer1 ~]# `ldapadd -x -D cn=Manager,dc=prolug,dc=lan -W -f adduser.ldif`
+[root@hammer1 ~]# ldapadd -x -D cn=Manager,dc=prolug,dc=lan -W -f adduser.ldif
 ```
 
 
 #### 16. Verify that your user is in the system.
 
 ```bash
-[root@hammer1 ~]# `ldapsearch -x -b "ou=People,dc=prolug,dc=lan"`
+[root@hammer1 ~]# ldapsearch -x -b "ou=People,dc=prolug,dc=lan"
 ```
 
 #### 17. Secure the system with TLS (accept all defaults)
 
 ```bash
-[root@hammer1 ~]# `openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/pki/tls/ldapserver.key -out /etc/pki/tls/ldapserver.crt`
-[root@hammer1 ~]# `chown ldap:ldap /etc/pki/tls/{ldapserver.crt,ldapserver.key}`
+[root@hammer1 ~]# openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/pki/tls/ldapserver.key -out /etc/pki/tls/ldapserver.crt
+[root@hammer1 ~]# chown ldap:ldap /etc/pki/tls/{ldapserver.crt,ldapserver.key}
 ```
 
 ```bash
-[root@hammer1 ~]# `ls -l /etc/pki/tls/ldap*`
+[root@hammer1 ~]# ls -l /etc/pki/tls/ldap*
 ```
 
 Output:
@@ -393,7 +393,7 @@ Output:
 </blockquote>
 
 ```bash
-[root@hammer1 ~]# `vi tls.ldif`
+[root@hammer1 ~]# vi tls.ldif
 ```
 
 ```yaml
@@ -410,13 +410,13 @@ olcTLSCertificateFile: /etc/pki/tls/ldapserver.crt
 ```
 
 ```bash
-[root@hammer1 ~]# `ldapadd -Y EXTERNAL -H ldapi:/// -f tls.ldif`
+[root@hammer1 ~]# ldapadd -Y EXTERNAL -H ldapi:/// -f tls.ldif
 ```
 
 #### 18. Fix the /etc/openldap/ldap.conf to allow for certs
 
 ```bash
-[root@hammer1 ~]# `vi /etc/openldap/ldap.conf`
+[root@hammer1 ~]# vi /etc/openldap/ldap.conf
 ```
 
 ```bash
@@ -451,7 +451,7 @@ SASL_NOCANON on
 ```
 
 ```bash
-[root@hammer1 ~]# `systemctl restart slapd`
+[root@hammer1 ~]# systemctl restart slapd
 ```
 
 ### SSSD Configuration and Realmd join to LDAP
@@ -462,16 +462,16 @@ local resources. You will likely do this during your career and it is a valuable
 #### 1. Install sssd, configure, and validate that the user is seen by the system
 
 ```bash
-[root@hammer1 ~]# `dnf install openldap-clients sssd sssd-ldap oddjob-mkhomedir authselect`
-[root@hammer1 ~]# `authselect select sssd with-mkhomedir --force`
-[root@hammer1 ~]# `systemctl enable --now oddjobd.service`
-[root@hammer1 ~]# `systemctl status oddjobd.service`
+[root@hammer1 ~]# dnf install openldap-clients sssd sssd-ldap oddjob-mkhomedir authselect
+[root@hammer1 ~]# authselect select sssd with-mkhomedir --force
+[root@hammer1 ~]# systemctl enable --now oddjobd.service
+[root@hammer1 ~]# systemctl status oddjobd.service
 ```
 
 #### 2. Uncomment and fix the lines in /etc/openldap/ldap.conf
 
 ```bash
-[root@hammer1 ~]# `vi /etc/openldap/ldap.conf`
+[root@hammer1 ~]# vi /etc/openldap/ldap.conf
 ```
 
 Output:
@@ -486,7 +486,7 @@ URI ldap://ldap.ldap.lan/
 #### 3. Edit the sssd.conf file
 
 ```bash
-[root@hammer1 ~]# `vi /etc/sssd/sssd.conf`
+[root@hammer1 ~]# vi /etc/sssd/sssd.conf
 ```
 
 ```yaml
@@ -518,8 +518,8 @@ homedir_substring = /home
 
 #### 4. Validate that the user can be seen
 
-```bash 
-[root@hammer1 ~]# `id testuser`
+```bash
+[root@hammer1 ~]# id testuser
 ```
 
 Output:
@@ -536,5 +536,5 @@ Congratulations! Look at you, doing all the Linux.
 #### Please reboot the the lab machine when done.
 
 ```bash
-[root@hammer1 ~]# `reboot`
+[root@hammer1 ~]# reboot
 ```
