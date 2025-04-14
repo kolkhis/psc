@@ -44,10 +44,6 @@ could be transposed to a `.md` file.
     allowfullscreen>
 </iframe>
 
-Download the STIG Viewer 2.18 from - https://public.cyber.mil/stigs/downloads/
-Download the STIG for RHEL 9 and the import it into your STIG viewer
-Create a checklist from the opened STIG for RHEL 9
-
 #### Discussion Post #1
 
 There are 401 stigs for RHEL 9. If you filter in your STIG viewer for
