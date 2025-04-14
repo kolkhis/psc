@@ -115,6 +115,11 @@ You will likely not build an LDAP server in a real world environment. We are doi
 To simplify some of the typing in this lab, there is a file located at
 `/lab_work/identity_and_access_management.tar.gz` that you can pull down to your system with the correct `.ldif` files.
 
+```bash
+cp /lab_work/identity_and_access_management.tar.gz .
+tar -xzvf identity_and_access_management.tar.
+```
+
 ### Install and configure OpenLDAP
 
 #### 1. Stop the warewulf client
@@ -125,7 +130,7 @@ systemctl stop wwclient
 
 #### 2. Edit your /etc/hosts file
 
-use your server line
+ *Look for and edit the line that has your current server*
 
 Entry for hammer1 for example:  
 `192.168.200.151 hammer1 hammer1-default ldap.prolug.lan ldap`
@@ -148,14 +153,16 @@ ss -ntulp | grep slapd
 #### 5. Allow ldap through the firewall
 
 ```bash
-firewall-cmd --add-service={ldap,ldaps} --permanent
-firewall-cmd --reload
-firewall-cmd --list-all
+[root@hammer1 ~]# firewall-cmd --add-service={ldap,ldaps} --permanent
+[root@hammer1 ~]# firewall-cmd --reload
+[root@hammer1 ~]# firewall-cmd --list-all
 ```
 
-#### 6. Generate a password (use `testpassword`)
+#### 6. Generate a password (Our example uses `testpassword`) This will return a salted SSHA password. *Save this password and stalted hash for later input*
 
+```bash
 [root@hammer1 ~]# `slappasswd`
+```
 
 Output:
 
@@ -167,7 +174,7 @@ Re-enter new password:
 
 </blockquote>
 
-#### 7. Change the password
+#### 7. Change the password 
 
 [root@hammer1 ~]# `vi changerootpass.ldif`
 
@@ -178,11 +185,9 @@ replace: olcRootPW
 olcRootPW: {SSHA}vKobSZO1HDGxp2OElzli/xfAzY4jSDMZ
 ```
 
-[root@hammer1 ~]# `ldapadd -Y EXTERNAL -H ldapi:/// -f changerootpass.ldif `
+t[root@hammer1 ~]# `ldapadd -Y EXTERNAL -H ldapi:/// -f changerootpass.ldif `
 
 Output:
-<blockquote>
-
 SASL/EXTERNAL authentication started  
 SASL username: gidNumber=0+uidNumber=0,cn=peercred,cn=external,cn=auth  
 SASL SSF: 0  
