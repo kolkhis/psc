@@ -178,7 +178,7 @@ Re-enter new password:
 
 </blockquote>
 
-#### 7. Change the password 
+#### 7. Change the password
 
 ```bash
 [root@hammer1 ~]# `vi changerootpass.ldif`
@@ -195,9 +195,10 @@ olcRootPW: {SSHA}vKobSZO1HDGxp2OElzli/xfAzY4jSDMZ
 [root@hammer1 ~]# `ldapadd -Y EXTERNAL -H ldapi:/// -f changerootpass.ldif `
 ```
 
+Output:
+
 <blockquote>
 
-Output:
 SASL/EXTERNAL authentication started  
 SASL username: gidNumber=0+uidNumber=0,cn=peercred,cn=external,cn=auth  
 SASL SSF: 0  
@@ -273,7 +274,9 @@ modifying entry "olcDatabase={2}mdb,cn=config"
 
 #### 11. Search and verify the domain is working.
 
+```bash
 [root@hammer1 ~]# `ldapsearch -H ldap:// -x -s base -b "" -LLL "namingContexts"`
+```
 
 Output:
 
