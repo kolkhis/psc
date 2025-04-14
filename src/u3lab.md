@@ -115,22 +115,22 @@ You will likely not build an LDAP server in a real world environment. We are doi
 To simplify some of the typing in this lab, there is a file located at
 `/lab_work/identity_and_access_management.tar.gz` that you can pull down to your system with the correct `.ldif` files.
 
-#### Install and configure OpenLDAP
+### Install and configure OpenLDAP
 
-#### Stop the warewulf client
+#### 1. Stop the warewulf client
 
 ```bash
 systemctl stop wwclient
 ```
 
-#### Edit your /etc/hosts file
+#### 2. Edit your /etc/hosts file
 
 use your server line
 
 Entry for hammer1 for example:  
 `192.168.200.151 hammer1 hammer1-default ldap.prolug.lan ldap`
 
-#### Setup dnf repo
+#### 3. Setup dnf repo
 
 ```bash
 dnf config-manager --set-enabled plus
@@ -138,14 +138,14 @@ dnf repolist
 dnf -y install openldap-servers openldap-clients openldap
 ```
 
-#### Start slapd systemctl
+#### 4. Start slapd systemctl
 
 ```bash
 systemctl start slapd
 ss -ntulp | grep slapd
 ```
 
-#### Allow ldap through the firewall
+#### 5. Allow ldap through the firewall
 
 ```bash
 firewall-cmd --add-service={ldap,ldaps} --permanent
@@ -153,7 +153,7 @@ firewall-cmd --reload
 firewall-cmd --list-all
 ```
 
-#### Generate a password (use `testpassword`)
+#### 6. Generate a password (use `testpassword`)
 
 [root@hammer1 ~]# `slappasswd`
 
@@ -167,7 +167,7 @@ Re-enter new password:
 
 </blockquote>
 
-#### Change the password
+#### 7. Change the password
 
 [root@hammer1 ~]# `vi changerootpass.ldif`
 
@@ -180,14 +180,17 @@ olcRootPW: {SSHA}vKobSZO1HDGxp2OElzli/xfAzY4jSDMZ
 
 [root@hammer1 ~]# `ldapadd -Y EXTERNAL -H ldapi:/// -f changerootpass.ldif `
 
-```yaml
+Output:
+<blockquote>
+
 SASL/EXTERNAL authentication started
 SASL username: gidNumber=0+uidNumber=0,cn=peercred,cn=external,cn=auth
 SASL SSF: 0
 modifying entry "olcDatabase={0}config,cn=config"
-```
 
-#### Generate basic schemas
+</blockquote>
+
+#### 8. Generate basic schemas
 
 ```bash
 ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/openldap/schema/cosine.ldif
@@ -195,7 +198,7 @@ ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/openldap/schema/nis.ldif
 ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/openldap/schema/inetorgperson.ldif
 ```
 
-#### Set up the domain (USE THE PASSWORD YOU GENERATED EARLIER)
+#### 9. Set up the domain (USE THE PASSWORD YOU GENERATED EARLIER)
 
 [root@hammer1 ~]# `vi setdomain.ldif`
 
@@ -230,7 +233,7 @@ olcAccess: {1}to dn.base="" by * read
 olcAccess: {2}to * by dn="cn=Manager,dc=prolug,dc=lan" write by * read
 ```
 
-#### Run it
+#### 10. Run it
 
 [root@hammer1 ~]# `ldapmodify -Y EXTERNAL -H ldapi:/// -f setdomain.ldif`
 
@@ -249,7 +252,7 @@ modifying entry "olcDatabase={2}mdb,cn=config"
 
 </blockquote>
 
-#### Search and verify the domain is working.
+#### 11. Search and verify the domain is working.
 
 [root@hammer1 ~]# `ldapsearch -H ldap:// -x -s base -b "" -LLL "namingContexts"`
 
@@ -262,7 +265,7 @@ namingContexts: dc=prolug,dc=lan
 
 </blockquote>
 
-#### Add the base group and organization.
+#### 12. Add the base group and organization.
 
 [root@hammer1 ~]# `vi addou.ldif`
 
@@ -290,12 +293,12 @@ ou: Group
 
 `ldapadd -x -D cn=Manager,dc=prolug,dc=lan -W -f addou.ldif`
 
-#### Verifying
+#### 13. Verifying
 
 `ldapsearch -H ldap:// -x -s base -b "" -LLL "+"`  
 `ldapsearch -x -b "dc=prolug,dc=lan" ou`
 
-#### Add a user
+#### 14. Add a user
 
 Generate a password  
 `slappasswd` (use testuser1234)
@@ -327,11 +330,11 @@ memberUid: testuser
 
 `ldapadd -x -D cn=Manager,dc=prolug,dc=lan -W -f adduser.ldif`
 
-#### Verify that your user is in the system.
+#### 16. Verify that your user is in the system.
 
 `ldapsearch -x -b "ou=People,dc=prolug,dc=lan"`
 
-#### Secure the system with TLS (accept all defaults)
+#### 17. Secure the system with TLS (accept all defaults)
 
 ```bash
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/pki/tls/ldapserver.key -out /etc/pki/tls/ldapserver.crt
