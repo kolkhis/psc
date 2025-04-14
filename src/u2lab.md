@@ -7,16 +7,14 @@
 
 ### Required Materials
 
-Putty or other connection tool Lab Server
-
-Root or sudo command access
-
-STIG Viewer 2.18 (download from <https://public.cyber.mil/stigs/downloads/> )
+Putty or other connection tool Lab Server  
+Root or sudo command access  
+STIG Viewer 2.18 (download from <https://public.cyber.mil/stigs/downloads/>)
 
 #### Downloads
 
 The lab has been provided below. The document(s) can be transposed to
-the desired format so long as the content is preserved. For example, the `.txt`
+the desired format so long as the content is preserved. For example, the `.docx`
 could be transposed to a `.md` file.
 
 - <a href="./assets/downloads/u2/u2_lab.txt" target="_blank" download>📥 u2_lab(`.txt`)</a>
