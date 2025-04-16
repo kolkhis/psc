@@ -529,12 +529,3 @@ Output:
 uid=15000(testuser) gid=15000 groups=15000
 
 </blockquote>
-
-
-Congratulations! Look at you, doing all the Linux.
-
-#### Please reboot the the lab machine when done.
-
-```bash
-[root@hammer1 ~]# reboot
-```
