@@ -5,6 +5,9 @@
     </p>
 </div>
 
+> If you are unable to finish the lab in the ProLUG lab environment we ask you `reboot`
+> the machine from the command line so that other students will have the intended environment.
+
 ### Required Materials
 
 Putty or other connection tool Lab Server  
@@ -49,7 +52,7 @@ Download the STIG for RHEL 9 and the import it into your STIG viewer
 
 Create a checklist from the opened STIG for RHEL 9
 
-<img src="./assets/downloads/u3/image1.png"></img>
+<img src="./assets/downloads/u3/image2.png"></img>
 
 ## Lab 🧪
 
@@ -130,7 +133,7 @@ To simplify some of the typing in this lab, there is a file located at
 
 #### 2. Edit your /etc/hosts file
 
- *Look for and edit the line that has your current server*
+**Look for and edit the line that has your current server**
 
 ```bash
 [root@hammer1 ~]# vi /etc/hosts
@@ -192,7 +195,7 @@ olcRootPW: {SSHA}vKobSZO1HDGxp2OElzli/xfAzY4jSDMZ
 ```
 
 ```bash
-[root@hammer1 ~]# ldapadd -Y EXTERNAL -H ldapi:/// -f changerootpass.ldif 
+[root@hammer1 ~]# ldapadd -Y EXTERNAL -H ldapi:/// -f changerootpass.ldif
 ```
 
 Output:
@@ -322,16 +325,16 @@ ou: Group
 #### 13. Verifying
 
 ```bash
-[root@hammer1 ~]# ldapsearch -H ldap:// -x -s base -b "" -LLL "+"  
+[root@hammer1 ~]# ldapsearch -H ldap:// -x -s base -b "" -LLL "+"
 [root@hammer1 ~]# ldapsearch -x -b "dc=prolug,dc=lan" ou
 ```
 
 #### 14. Add a user
 
-Generate a password  (use testuser1234)
+Generate a password (use testuser1234)
 
 ```bash
-[root@hammer1 ~]# slappasswd 
+[root@hammer1 ~]# slappasswd
 ```
 
 ```bash
@@ -364,7 +367,6 @@ memberUid: testuser
 ```bash
 [root@hammer1 ~]# ldapadd -x -D cn=Manager,dc=prolug,dc=lan -W -f adduser.ldif
 ```
-
 
 #### 16. Verify that your user is in the system.
 
@@ -529,3 +531,11 @@ Output:
 uid=15000(testuser) gid=15000 groups=15000
 
 </blockquote>
+
+Congratulations! Look at you, doing all the Linux.
+
+#### Please reboot the the lab machine when done.
+
+```bash
+[root@hammer1 ~]# reboot
+```
