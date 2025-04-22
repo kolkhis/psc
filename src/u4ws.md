@@ -27,22 +27,21 @@ could be transposed to a `.md` file.
 
 - <a href="./assets/downloads/u4/u4_worksheet.pdf" target="_blank" download>📥 u4_worksheet(`.pdf`)</a>
 - <a href="./assets/downloads/u4/u4_worksheet.txt" target="_blank" download>📥 u4_worksheet(`.txt`)</a>
-<!-- - <a href="./assets/downloads/u3/u3_worksheet.docx" target="_blank" download>📥 u3_worksheet(`.docx`)</a> -->
 
-### Unit 3 Recording
+### Unit 4 Recording
 
-<img src="./assets/images/under-construction.jpg" style="border-radius:2%"></img>
+<!-- <img src="./assets/images/under-construction.jpg" style="border-radius:2%"></img> -->
 
-<!-- <iframe -->
-<!--     style="width: 100%; height: 100%; border: none; -->
-<!--     aspect-ratio: 16/9; border-radius: 1rem; background:black" -->
-<!--     src="" -->
-<!--     title="" -->
-<!--     frameborder="0" -->
-<!--     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" -->
-<!--     referrerpolicy="strict-origin-when-cross-origin" -->
-<!--     allowfullscreen> -->
-<!-- </iframe> -->
+<iframe
+    style="width: 100%; height: 100%; border: none;
+    aspect-ratio: 16/9; border-radius: 1rem; background:black"
+    src="https://www.youtube.com/embed/dnz92v71Tr4?si=tKBN9rcjWLBtecPO"
+    title="Security Engineering Unit 4: Bastions and Air-Gapped Systems"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen>
+</iframe>
 
 #### Discussion Post #1
 
