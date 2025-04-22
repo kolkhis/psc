@@ -2,6 +2,7 @@
 
 - [Course Syllabus](./syllabus.md)
   - [Final Project Outline](./project.md)
+  - [Earning the Certification](./certify.md)
 - [Table of Contents](./unitindex.md)
 - [About ProLUG](./prolug.md)
 - [Unit 1](./u1intro.md)
