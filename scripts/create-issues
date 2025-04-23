@@ -51,21 +51,25 @@ done
 
 case $TYPE in
     ws|worksheet)
+        TYPE='worksheet'
         FILE="u${UNIT}ws.md"
         EMOJI="📄"
         LABEL="Worksheet ${EMOJI}"
         ;;
     l|lab)
+        TYPE='lab'
         FILE="u${UNIT}lab.md"
         EMOJI="🧪"
         LABEL="Lab ${EMOJI}"
         ;;
     i|intro)
+        TYPE='intro'
         FILE="u${UNIT}intro.md"
         EMOJI="👋"
         LABEL="Intro"
         ;;
     b|bonus)
+        TYPE='bonus'
         FILE="u${UNIT}b.md"
         EMOJI="🍒"
         LABEL="Bonus ${EMOJI}"
