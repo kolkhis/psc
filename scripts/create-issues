@@ -1,4 +1,6 @@
 #!/bin/bash
+# Make sure you're authenticated via 'gh auth login', with a PAT with correct access.  
+# Run from inside the `scripts` directory.
 
 declare UNIT
 declare TYPE
@@ -40,6 +42,9 @@ while [[ -n $1 ]]; do
             SYNOPSIS:
             Creates an issue for the upstream repo. The 'gh' tool must be configured beforehand.
 			EOF
+            shift;
+            exit 0
+            ;;
     esac
 done
 
@@ -74,7 +79,7 @@ gh issue create \
     --label "help wanted" \
     --label "enhancement" \
     --label "good first issue" \
-    --body "$(cat ./.github/ISSUE_TEMPLATE/unit-"${TYPE,,}"-body.md)" || {
+    --body "$(cat ../.github/ISSUE_TEMPLATE/unit-"${TYPE,,}"-body.md)" || {
     printf >&2 "Failed to create the issue!\n" && exit 1
 }
     # --project "pscpm" \ # doesn't work
