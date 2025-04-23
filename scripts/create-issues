@@ -1,0 +1,81 @@
+#!/bin/bash
+
+declare UNIT
+declare TYPE
+declare FILE
+declare EMOJI
+declare PROJECT
+
+case $PWD in
+    *lac*)
+        PROJECT='lac'
+        ;;
+    *psc*)
+        PROJECT='pscpm'
+        ;;
+esac
+
+
+while [[ -n $1 ]]; do
+    case $1 in
+        -u|--unit)
+            [[ -n $2 ]] && UNIT=$2 || printf "Bad argument to -u/--unit.\n"
+            shift; shift;
+            ;;
+        -t|--type)
+            [[ -n $2 ]] && TYPE=$2 || printf "No argument to -t/--type.\n"
+            shift; shift;
+            ;;
+        -h|--help)
+            cat <<- EOF
+            NAME: create-issues
+            USAGE:
+              create-issues -t|--type TYPE -u|--unit UNIT_NUMBER
+
+            OPTIONS:
+                -u | --unit UNIT_NUMBER     Specify the unit number for the issue 
+                -t | --type TYPE            Specify the type of document for the issue 
+                                            This can be one of 'worksheet', 'lab', 'intro', 'bonus'
+
+            SYNOPSIS:
+            Creates an issue for the upstream repo. The 'gh' tool must be configured beforehand.
+			EOF
+    esac
+done
+
+
+case $TYPE in
+    ws|worksheet)
+        FILE="u${UNIT}ws.md"
+        EMOJI="📄"
+        LABEL="Worksheet ${EMOJI}"
+        ;;
+    l|lab)
+        FILE="u${UNIT}lab.md"
+        EMOJI="🧪"
+        LABEL="Lab ${EMOJI}"
+        ;;
+    i|intro)
+        FILE="u${UNIT}intro.md"
+        EMOJI="👋"
+        LABEL="Intro"
+        ;;
+    b|bonus)
+        FILE="u${UNIT}b.md"
+        EMOJI="🍒"
+        LABEL="Bonus ${EMOJI}"
+        ;;
+esac
+
+gh issue create \
+    --title "Unit ${UNIT} ${TYPE^} ${EMOJI} (${FILE})" \
+    --label "${LABEL}" \
+    --label "Unit #${UNIT}" \
+    --label "help wanted" \
+    --label "enhancement" \
+    --label "good first issue" \
+    --body "$(cat ./.github/ISSUE_TEMPLATE/unit-"${TYPE,,}"-body.md)" || {
+    printf >&2 "Failed to create the issue!\n" && exit 1
+}
+    # --project "pscpm" \ # doesn't work
+
