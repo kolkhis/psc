@@ -5,8 +5,6 @@
     </p>
 </div>
 
-# Under Construction
-
 ## Overview
 
 User access in an larger organizations requires more sophisticated controls. For this purpose Active Directory (AD) and Lightweight Directory Access Protocol (LDAP) have become popular choices as they offer more sophisticated and robust ways of controlling access.
