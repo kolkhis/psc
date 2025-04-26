@@ -12,9 +12,9 @@ In this chapter, you will learn why AD and LDAP are popular choices.
 
 ## Learning Objectives
 
-1. Understand how LDAP or AD works and why it is beneficial
-2. High level understanding of hardening Rocky Linux, a RHEL adjacent distro
-3. Gain a basic understanding of PAM 
+1. Understand how LDAP or AD works and why it is beneficial.
+2. High level understanding of hardening Rocky Linux, a RHEL adjacent distro.
+3. Gain a basic understanding of PAM.
 
 ## Relevance and Context
 
@@ -26,19 +26,26 @@ Understanding these systems is foundational for administrators working with Rock
 
 To be successful, students should have a working understanding of skills and tools including:
 
-1. Basic Directory navigation
-2. Knowledge of editing config files
-3. Basic knowledge of StigViewer
-4. Understanding of SystemD services and the SysCTL command
+1. Basic Directory navigation.
+2. Knowledge of editing config files.
+3. Basic knowledge of StigViewer.
+4. Understanding of SystemD services and the SysCTL command.
 
 ## Key Terms and Definitions
 
 PAM  
+
 AD  
+
 LDAP  
+
 sssd  
+
 oddjob  
+
 krb5  
+
 realm/realmd  
+
 wheel (system group in RHEL)
 
