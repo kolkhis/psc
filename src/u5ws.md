@@ -53,13 +53,13 @@ Linux.
 
 #### Discussion Post #2
 
-Do a google search for “patching enterprise Linux” and try to
+Do a google search for "patching enterprise Linux" and try to
 wade through all of the noise.
 
 1. What blogs (or AI) do you find that enumerates a list of steps or checklists to
 consider?
 2. After looking at that, how does patching a fleet of systems in the enterprise differ
-from pushing “update now” on your local desktop?
+from pushing "update now" on your local desktop?
     What seems to be the major considerations?
     What seems to be the major roadblocks?
 
@@ -110,4 +110,4 @@ developer, or manager?
 
 2. What questions do you still have about this week?
 
-3. How are you going to use what you’ve learned in your current role?
+3. How are you going to use what you've learned in your current role?

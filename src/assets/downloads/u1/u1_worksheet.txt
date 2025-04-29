@@ -6,7 +6,7 @@ Fill out this sheet as you progress through the lab and discussions. Hold your w
 
 
 Discussion Questions:
-Unit 2 Discussion Post 1: The first question of this course is, “What is Security?”
+Unit 2 Discussion Post 1: The first question of this course is, "What is Security?"
 1. Describe the CIA Triad.
 2. What is the relationship between Authority, Will, and Force as they relate to security?
 3. What are the types of controls and how do they relate to the above question?
@@ -88,4 +88,4 @@ Reflection Questions
 
 
 
-2. How are you going to use what you’ve learned in your current role?
+2. How are you going to use what you've learned in your current role?
