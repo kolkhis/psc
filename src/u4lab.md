@@ -59,7 +59,7 @@ hosts and jailing users as they enter an air-gapped environment.
 
 3. When you jump into the bastion host, do you have any options other than the one you have given yourself?
 
-4. How did you test that you couldn’t leave the jailed environment?
+4. How did you test that you couldn't leave the jailed environment?
    - How effective do you think this is as a technical preventative control against user
      breakout in the jail, having a 20 second timeout?
 

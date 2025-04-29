@@ -91,7 +91,7 @@ sysctl -a | grep -i ipv4 | grep -i syncookies
 <img src="./assets/downloads/u2/image6.png"></img>
 
 Can you remediate this finding?  
-In this case it’s already correctly set.  
+In this case it's already correctly set.  
 But if we needed to, we would set that value in /etc/sysctl.d/00- remediate.conf  
 And then reload sysctl with `sysctl --system`
 

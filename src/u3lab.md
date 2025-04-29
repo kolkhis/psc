@@ -104,7 +104,7 @@ Is it set properly on your system?
 
 How many are there?  
 What are the password complexity rules?  
-Are there any you haven’t seen before?
+Are there any you haven't seen before?
 
 #### Filter by sssd
 

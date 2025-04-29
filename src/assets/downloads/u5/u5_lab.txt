@@ -1,4 +1,4 @@
-Unit 5 Lab – Repos and Patching
+Unit 5 Lab - Repos and Patching
 
 Required Materials
 Putty or other connection tool
@@ -77,7 +77,7 @@ Building repos
 
       # Save with esc :wq or “shift + ZZ”
 
-    i. Do the paths you’re using here make sense to you based off what you saw
+    i. Do the paths you're using here make sense to you based off what you saw
        with the ls -l? Why or why not?
     f. chmod 644 /etc/yum.repos.d/rocky9.repo
     g. dnf clean all
@@ -98,7 +98,7 @@ Building repos
 
             1. How many packages does it want to install?
 
-            2. How can you tell they’re from different repos?
+            2. How can you tell they're from different repos?
 
 4. Share out the local repository for your internal systems (tested on just this one system)
     a. rpm -qa | grep -i httpd
@@ -142,7 +142,7 @@ Building repos
       baseurl=http://hammer25/repo/AppStream/
       gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
 
-    i. Do the paths you’ve modified at baseurl make sense to you? If not, what do you need to better understand?
+    i. Do the paths you've modified at baseurl make sense to you? If not, what do you need to better understand?
     i. dnf clean all
     j. dnf repolist
     k. Try to install something
@@ -161,9 +161,9 @@ Enterprise patching
 
 
 Digging Deeper challenge (not required for finishing lab)
-1. You’ve set up a local repository and you’ve shared that repo out to other systems that might 
+1. You've set up a local repository and you've shared that repo out to other systems that might 
    want to connect.
-   Why might you need this if you’re going to fully air-gap systems?  
+   Why might you need this if you're going to fully air-gap systems?  
    Is it still necessary even if your enterprise patching solution is well designed? Why or why not?
 
 2. Can you add the Mellanox ISO that is included in the /lab_work/repos_and_patching section to

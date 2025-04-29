@@ -113,4 +113,4 @@ STIG:
 
 1. What questions do you still have about this week?
 
-2. How are you going to use what you’ve learned in your current role?
+2. How are you going to use what you've learned in your current role?
