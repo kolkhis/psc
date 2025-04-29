@@ -1,4 +1,4 @@
-﻿Unit 2 Lab – Network Standards and
+﻿Unit 2 Lab - Network Standards and
 Compliance
 
 Required Materials
@@ -48,7 +48,7 @@ Network Service configuration:
    1. sysctl -a | grep -i ipv4 | grep -i syncookies
    2. Can you remediate this finding?
 
-In this case it’s already correctly set.
+In this case it's already correctly set.
 
 But if we needed to, we would set that value in /etc/sysctl.d/00- remediate.conf
 And then reload sysctl with `sysctl --system`

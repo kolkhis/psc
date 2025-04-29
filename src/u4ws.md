@@ -63,7 +63,7 @@ Or find some on your own about air-gapped systems.
 Do a Google or AI search of topics around jailing a user or processes in Linux.
 
 1. Can you enumerate the methods of jailing users?
-2. Can you think of when you’ve been jailed as a Linux user?  
+2. Can you think of when you've been jailed as a Linux user?  
    If not, can you think of the useful ways to use a jail?
 
 <div class="warning">
@@ -106,7 +106,7 @@ Namespaces
 
 ---
 
-1. While this isn’t, strictly speaking, an automation course there is some value in
+1. While this isn't, strictly speaking, an automation course there is some value in
    looking at automation of the bastion deployments. Check out this ansible code:  
    <https://github.com/het-tanis/stream_setup/blob/master/roles/bastion_deploy/tasks/main.yml>
 
@@ -117,7 +117,7 @@ Namespaces
    process.
 
 3. Knowing what you now know about bastions, jails, and air-gapped systems. Reflect
-   on the first 3 weeks, all the STIGs you’ve reviewed and touched. Do any of them
+   on the first 3 weeks, all the STIGs you've reviewed and touched. Do any of them
    seem moot, or less necessary if applied in an air-gapped environment?
 
    - Does your answer change if you read about Zero Trust and know how much of a hot
@@ -136,4 +136,4 @@ Namespaces
 
 2. What questions do you still have about this week?
 
-3. How are you going to use what you’ve learned in your current role?
+3. How are you going to use what you've learned in your current role?

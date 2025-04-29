@@ -98,13 +98,13 @@ What is the fix?
 What type of control is being implemented?  
 Is it set properly on your system?
 
-#### Filter by “password complexity”
+#### Filter by "password complexity"
 
 <img src="./assets/downloads/u3/image3.jpg"></img>
 
 How many are there?  
 What are the password complexity rules?  
-Are there any you haven’t seen before?
+Are there any you haven't seen before?
 
 #### Filter by sssd
 

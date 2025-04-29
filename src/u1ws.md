@@ -47,7 +47,7 @@ could be transposed to a `.md` file.
 
 #### Discussion Post #1
 
-The first question of this course is, “What is Security?”
+The first question of this course is, "What is Security?"
 
 1. Describe the CIA Triad.
 2. What is the relationship between Authority, Will, and Force as they relate to security?
@@ -113,4 +113,4 @@ STIG:
 
 1. What questions do you still have about this week?
 
-2. How are you going to use what you’ve learned in your current role?
+2. How are you going to use what you've learned in your current role?
