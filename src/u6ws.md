@@ -29,10 +29,8 @@ could be transposed to a `.md` file.
 - <a href="./assets/downloads/u6/u6_worksheet.txt" target="_blank" download>📥 u6_worksheet(`.txt`)</a>
 
 ### Unit 6 Recording
-
-<img src="./assets/images/under-construction.jpg" style="border-radius:2%"></img>
-
-<!-- ## TODO - Add Video Recording -->
+  
+<iframe style="width: 100%; height: 100%; border: none; aspect-ratio: 16/9; border-radius: 1rem; background:black" src="https://www.youtube.com/embed/pnCC-FX-aag?si=Y9zt3V_f5osfmGYn" title="Unit 6 Recording - ProLUG Linux Security Engineering Course - Free in Discord" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 #### Discussion Post #1
 
