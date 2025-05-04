@@ -54,15 +54,15 @@ Can you verify FIPS status?
 
 Download the STIG Viewer 2.18 from - <https://public.cyber.mil/stigs/downloads/>
 
-<img src="./assets/downloads/u2/image2.png"></img>
+<img src="./assets/images/u2/image2.png"></img>
 
 Download the STIG for RHEL 9 and the import it into your STIG viewer
 
-<img src="./assets/downloads/u2/image3.png"></img>
+<img src="./assets/images/u2/image3.png"></img>
 
 Create a checklist from the opened STIG for RHEL 9
 
-<img src="./assets/downloads/u2/image4.png"></img>
+<img src="./assets/images/u2/image4.png"></img>
 
 ## Lab 🧪
 
@@ -75,7 +75,7 @@ This lab is designed to have the engineer practice securing a Linux server or se
 Connect to a hammer server  
 Filter by ipv4 and see how many STIGs you have.
 
-<img src="./assets/downloads/u2/image5.jpeg"></img>
+<img src="./assets/images/u2/image5.jpeg"></img>
 
 #### Examine STIG V-257957
 
@@ -88,7 +88,7 @@ Is it set properly on your system?
 sysctl -a | grep -i ipv4 | grep -i syncookies
 ```
 
-<img src="./assets/downloads/u2/image6.png"></img>
+<img src="./assets/images/u2/image6.png"></img>
 
 Can you remediate this finding?  
 In this case it's already correctly set.  
@@ -102,7 +102,7 @@ What is the fix?
 What type of control is being implemented?  
 Is it set properly on your system?
 
-<img src="./assets/downloads/u2/image7.png"></img>
+<img src="./assets/images/u2/image7.png"></img>
 
 How would you go about remediating this on your system?
 
@@ -117,7 +117,7 @@ Is it set properly on your system?
 
 How many STIGS do you see?
 
-<img src="./assets/downloads/u2/image8.jpeg"></img>
+<img src="./assets/images/u2/image8.jpeg"></img>
 
 What do these STIGS appear to be trying to do? What types of controls are they?
 
