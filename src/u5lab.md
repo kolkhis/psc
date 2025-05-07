@@ -26,8 +26,6 @@ could be transposed to a `.md` file.
 - <a href="./assets/downloads/u5/u5_lab.pdf" target="_blank" download>📥 u5_lab(`.pdf`)</a>
 <!-- - <a href="./assets/downloads/u5/u5_lab.docx" target="_blank" download>📥 u5_lab(`.docx`)</a> -->
 
-> Be sure to `reboot` the lab machine from the command line when you are done.
-
 ## PreLAB
 
 Download the STIG Viewer 2.18 from - <https://public.cyber.mil/stigs/downloads/>
@@ -281,3 +279,5 @@ run their own repo on their network.
 
 3. Make a pull request to improve the enterprise patching tool that you just used. Write up, for the
    group, why you need that change and how it improves the efficacy of the patching.
+
+> Be sure to `reboot` the lab machine from the command line when you are done.
