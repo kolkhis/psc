@@ -7,7 +7,7 @@ the end to turn them in as a final submission packet.
 
 Discussion Questions:
 
-Unit 5 Discussion Post 1: Review chapter 15 of the SRE book: 
+Unit 6 Discussion Post 1: Review chapter 15 of the SRE book: 
 https://google.github.io/building-secure-and-reliable-systems/raw/ch15.html#collect_appropriate_and_useful_logs. 
 There are 14 references at the end of the chapter. Follow them for more information. One of them: 
 https://jvns.ca/blog/2019/06/23/a-few-debugging-resources/ should be reviewed for 
@@ -20,7 +20,7 @@ question “c”.
 	   relationship between these topics? Are there any techniques you already do 
 	   that this helps solidify for you? 
 
-Unit 5 Discussion Post 2: Read https://sre.google/sre-book/monitoring-distributed-systems/  
+Unit 6 Discussion Post 2: Read https://sre.google/sre-book/monitoring-distributed-systems/  
 
 	a. What interesting or new things do you learn in this reading? What may you 
 	   want to know more about? 
