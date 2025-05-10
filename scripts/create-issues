@@ -48,8 +48,8 @@ while [[ -n $1 ]]; do
     esac
 done
 
-[[ -z $UNIT ]] && read -r -p "Enter unit number: " UNIT || printf "No unit!\n" && exit 1
-[[ -z $TYPE ]] && read -r -p "Enter type (ws/lab/intro/bonus): " TYPE || printf "No type!\n" && exit 1
+{ [[ -z $UNIT ]] && read -r -p "Enter unit number: " UNIT; } || { printf "No unit!\n" && exit 1; }
+{ [[ -z $TYPE ]] && read -r -p "Enter type (ws/lab/intro/bonus): " TYPE; } || { printf "No type!\n" && exit 1; }
 
 case $TYPE in
     ws|worksheet)
