@@ -40,13 +40,13 @@ or another of these tools may be the right choice in their organization or not.
 ### Rsyslog forwarding and collection
 
 1. Consider this architecture, where all modern Linux systems have built in rsyslog capabilities. One of them can
-   be set to “catch” or aggregate all logs and then any number of servers can send over to them.
+   be set to "catch" or aggregate all logs and then any number of servers can send over to them.
 
 <img src='./assets/images/u6/image1.jpg'></img>
 
 2. Complete the lab: <https://killercoda.com/het-tanis/course/Linux-Labs/206-setting-up-rsyslog>
 
-   - Why do we split out the logs in this lab? Why don’t we just aggregated them to one place?
+   - Why do we split out the logs in this lab? Why don't we just aggregated them to one place?
 
      - What do we split them out by?
      - How does that template configuration work?
@@ -96,7 +96,7 @@ or another of these tools may be the right choice in their organization or not.
 1. Apache Kafka is not the only message queue, but it is extremely popular (found in 80% for Fortune 100
    companies… or 80 of them). Read about the use cases here: <https://kafka.apache.org/uses>
 
-2. Review our diagram here. Maybe we’re testing kafka and want to integrate it to the existing infrastructure.
+2. Review our diagram here. Maybe we're testing kafka and want to integrate it to the existing infrastructure.
    Maybe we have a remote location that we need to reliably catch logs in real time and then move them remote. There are many reasons to use this.
 
 <img src='./assets/images/u6/image3.jpg'></img>
@@ -114,13 +114,13 @@ or another of these tools may be the right choice in their organization or not.
 
 1. OPTIONAL: Setup VPC flow logs in your AWS environment: <https://catalog.workshops.aws/well-architected-security/en-US/3-detection/40-vpc-flow-logs-analysis-dashboard/1-enable-vpc-flow-logs>
 
-2. OPTIONAL: Even if not completing these labs, why might it be useful to understand the fields of a VPC flow log even if you’re not setting up logging in AWS environments (but your organization does use AWS)? https://docs.aws.amazon.com/vpc/latest/userguide/flow-logs-records-examples.html
+2. OPTIONAL: Even if not completing these labs, why might it be useful to understand the fields of a VPC flow log even if you're not setting up logging in AWS environments (but your organization does use AWS)? https://docs.aws.amazon.com/vpc/latest/userguide/flow-logs-records-examples.html
 
 ## Digging Deeper challenge (not required for finishing lab)
 
 1. For Architecture 3, using message queues. This is an excellent write-up of how disparate systems can be connected with a message queues or event bus to enhance metrics pipelining. <https://get.influxdata.com/rs/972-GDU-533/images/Customer%20Case%20Study_%20Wayfair.pdf>
 
-   - They’re not necessarily doing logs, but rather metric data, but can you see how they solved their latency
+   - They're not necessarily doing logs, but rather metric data, but can you see how they solved their latency
      and connectivity problems on page 14 and 15?
 
 2. Review some of the anti-patterns for cloud, but really any logging patterns. <https://docs.aws.amazon.com/wellarchitected/latest/framework/sec_detect_investigate_events_app_service_logging.html>

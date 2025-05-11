@@ -38,11 +38,11 @@ Review chapter 15 of the SRE book:
 <https://google.github.io/building-secure-and-reliable-systems/raw/ch15.html#collect_appropriate_and_useful_logs>.
 There are 14 references at the end of the chapter. Follow them for more information. One of them:
 <https://jvns.ca/blog/2019/06/23/a-few-debugging-resources/> should be reviewed for
-question “c”.
+question "c".
 
 - a. What are some concepts that are new to you?
 - b. There are 5 conclusions drawn, do you agree with them? Would you add or remove anything from the list?
-- c. In Julia Evan’s debugging blog, which shows that debugging is just another
+- c. In Julia Evan's debugging blog, which shows that debugging is just another
   form of troubleshooting, what useful things do you learn about the
   relationship between these topics? Are there any techniques you already do
   that this helps solidify for you?
@@ -53,7 +53,7 @@ Read <https://sre.google/sre-book/monitoring-distributed-systems/>.
 
 - What interesting or new things do you learn in this reading? What may you
   want to know more about?
-- What are the “4 golden signals”?
+- What are the "4 golden signals"?
 - After reading these, why is immutability so important to logging? What do you
   think the other required items are for logging to be effective?
 
@@ -110,7 +110,7 @@ SIEM
    - What are the manual and automated query capabilities provided, and how
      they help you rapidly get to a correct assessment of the logged events?
 
-2. Open up that STIG Viewer and filter by “logging” for any of the previous STIGs we’ve
+2. Open up that STIG Viewer and filter by "logging" for any of the previous STIGs we've
    worked on. (Mariadb has some really good ones.)
 
    - What seems to be a common theme?
@@ -124,10 +124,10 @@ SIEM
 
 1. What architectures have you used in your career?
 
-   - If you haven’t yet worked with any of these, what do you think you would
+   - If you haven't yet worked with any of these, what do you think you would
      architect in the ProLUG lab (~60 virtual machines, 4 physical machines, 1
      NFS share, and 2 Windows laptops?)
 
 2. What questions do you still have about this week?
 
-3. How are you going to use what you’ve learned in your current role?
+3. How are you going to use what you've learned in your current role?
