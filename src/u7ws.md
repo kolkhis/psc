@@ -140,4 +140,4 @@ Monitoring for defensive operations
 
 2. What questions do you still have about this week?
 
-3. How are you going to use what you’ve learned in your current role?
+3. How are you going to use what you've learned in your current role?
