@@ -25,4 +25,50 @@ could be transposed to a `.md` file.
 - <a href="./assets/downloads/u7/u7_lab.txt" target="_blank" download>📥 u7_lab(`.txt`)</a>
 - <a href="./assets/downloads/u7/u7_lab.docx" target="_blank" download>📥 u7_lab(`.docx`)</a>
 
+## Lab 🧪
+
+These labs focus on pulling metric information and then visualizing that data quickly on dashboards for real time analysis.
+
+### Monitoring Jails with Fail2ban logs
+<img src='./assets/images/u7/image1.png'></img>
+
+1. Complete the lab: https://killercoda.com/het-tanis/course/Linux-Labs/109-fail2ban-with-logmonitoring
+ - Were you able to see the IP address that was banned and unban it?
+
+ - Were you able to see all the NOTICE events in Grafana?
+
+ - What other questions do you have about this lab, and how might you go figure
+them out?
+
+### Monitoring Jails with Fail2ban and telemetry data
+<img src='./assets/images/u7/image2.png'></img>
+
+
+1. Complete the lab here: https://killercoda.com/het-tanis/course/Linux-Labs/110-fail2ban-withmetric-alerting
+
+ - Do you see fail2ban in the Grafana Dashboard? If not, how are you going to
+troubleshoot it?
+
+ - Did you get your test alert and then real alert to trigger into the Discord channel?
+
+ - What other applications or uses for this could you think of? Do you have other
+places you could send alerts that would help you professionally?
+
+
+## Digging Deeper challenge (not required for finishing lab)
+
+1. Review the alert manager documentation:
+https://prometheus.io/docs/alerting/latest/configuration/
+
+ - What are all the types of receivers you see?
+
+ - Which of the receivers do you have experience with?
+
+2. Review the Grafana alert thresholds: 
+https://grafana.com/docs/grafana/latest/panelsvisualizations/configure-thresholds/
+
+ - Can you modify one of the thresholds from the lab to trigger into the discord?
+
+ - What is the relationship between critical and warning by default?
+
 > Be sure to `reboot` the lab machine from the command line when you are done.
