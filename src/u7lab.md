@@ -33,7 +33,7 @@ These labs focus on pulling metric information and then visualizing that data qu
 
 <img src='./assets/images/u7/image1.png'></img>
 
-1. Complete the lab: <https://killercoda.com/het-tanis/course/Linux-Labs/109-fail2ban-with-logmonitoring>
+1. Complete the lab: <https://killercoda.com/het-tanis/course/Linux-Labs/109-fail2ban-with-log-monitoring>
 
    - Were you able to see the IP address that was banned and unban it?
 
@@ -46,7 +46,7 @@ These labs focus on pulling metric information and then visualizing that data qu
 
 <img src='./assets/images/u7/image2.png'></img>
 
-1. Complete the lab here: <https://killercoda.com/het-tanis/course/Linux-Labs/110-fail2ban-withmetric-alerting>
+1. Complete the lab here: <https://killercoda.com/het-tanis/course/Linux-Labs/110-fail2ban-with-metric-alerting>
 
    - Do you see `fail2ban` in the Grafana Dashboard? If not, how are you going to
      troubleshoot it?
@@ -66,7 +66,7 @@ These labs focus on pulling metric information and then visualizing that data qu
    - Which of the receivers do you have experience with?
 
 2. Review the Grafana alert thresholds:
-   <https://grafana.com/docs/grafana/latest/panelsvisualizations/configure-thresholds/>
+   <https://grafana.com/docs/grafana/latest/panels-visualizations/configure-thresholds/>
 
    - Can you modify one of the thresholds from the lab to trigger into the discord?
 
