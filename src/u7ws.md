@@ -30,7 +30,7 @@ could be transposed to a `.md` file.
 - <a href="./assets/downloads/u7/u7_worksheet.txt" target="_blank" download>📥 u7_worksheet(`.txt`)</a>
 - <a href="./assets/downloads/u7/u7_worksheet.pdf" target="_blank" download>📥 u7_worksheet(`.pdf`)</a>
 
-### Unit 1 Recording
+### Unit 7 Recording
 
 <!-- <iframe -->
 <!--     style="width: 100%; height: 100%; border: none; -->
@@ -59,8 +59,7 @@ Microsoft:
 #### Discussion Post #2
 
 When we think of our systems, sometimes an airgapped system is simple to think about
-because everything is closed in.  
-The idea of alerting or reporting is the opposite.  
+because everything is closed in. The idea of alerting or reporting is the opposite.
 We are trying to get the correct, timely, and important information out of the system
 when and where it is needed.
 
@@ -79,11 +78,11 @@ Read the summary at the top of:
 
 Submit your input by following the link below.
 
-The discussion posts are done in Discord threads. Click the 'Threads' icon on the top right and search for the discussion post.
+The discussion posts are done in Discord Forums.
 
 </div>
 
-- [Link to Discussion Posts](https://discord.com/channels/611027490848374811/1365776270800977962)
+- [Link to Discussion Forum](https://discord.com/channels/611027490848374811/1365776270800977962)
 
 ## Definitions
 
@@ -126,10 +125,10 @@ Monitoring for defensive operations
 
 ---
 
-1. Look into Wazuh: [Security Information and Event Management (SIEM). Real Time Monitoring | Wazuh] (https://wazuh.com/platform/siem/)
+1. Look into Wazuh: [Security Information and Event Management (SIEM). Real Time Monitoring | Wazuh](https://wazuh.com/platform/siem/)
 
    1. What are their major capabilities and features (what they advertise)?
-   1. What are they doing with logs that increases visibility and usefulness in the security space?  
+   1. What are they doing with logs that increases visibility and usefulness in the security space?
       [Log data analysis - Use cases · Wazuh documentation](https://documentation.wazuh.com/current/getting-started/use-cases/log-analysis.html)
 
 ## Reflection Questions
