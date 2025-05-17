@@ -1,7 +1,7 @@
 <div class="flex-container">
         <img src="https://github.com/ProfessionalLinuxUsersGroup/img/blob/main/Assets/Logos/ProLUG_Round_Transparent_LOGO.png?raw=true" width="64" height="64"></img>
     <p>
-        <h1>Configuration Drift and Remediation</h1>
+        <h1>Unit 8 Lab - Configuration Drift and Remediation</h1>
     </p>
 </div>
 
@@ -37,12 +37,12 @@ These labs focus on configuration drift tracking and remediation.
 
 2. Set a filter for “change management”.
 
-   - a. How many STIGs do you see?
+   - How many STIGs do you see?
 
 3. Review the wording, what is meant by a robust change management process?
-   - a. Do you think this can be applied in just one STIG? Why or why not?
-   - b. What type of control is being implemented with change management in these STIGS?
-   - i. Is it different across the STIGs or all the same?
+   - Do you think this can be applied in just one STIG? Why or why not?
+   - What type of control is being implemented with change management in these STIGS?
+     - Is it different across the STIGs or all the same?
 
 ### Monitoring configuration drift with Aide
 
@@ -50,32 +50,32 @@ These labs focus on configuration drift tracking and remediation.
 
 2. Install aide and watch the installation happen.
 
-   - a. `apt -y install aide`
-   - b. What is being put in the path /etc/aide/aide.conf.d/ ?
-     - i. How many files are in there?
+   - `apt -y install aide`
+   - What is being put in the path /etc/aide/aide.conf.d/ ?
+     - How many files are in there?
 
 3. Check your version of aide
 
-   - a. `aide -v`
+   - `aide -v`
 
 4. Read the man page (first page).
 
-   - a. What does aide try to do, and how does it do it?
+   - What does aide try to do, and how does it do it?
 
 5. What is the configuration of cron found in /etc/cron.daily/dailyaidecheck?
 
-   - a. What does this attempt to do?
-   - b. What checks are there before execution?
-   - c. Read the man for `capsh`, what is it used for?
+   - What does this attempt to do?
+   - What checks are there before execution?
+   - Read the man for `capsh`, what is it used for?
 
 6. Set up aide according to the default configuration
 
-   - a. `time aide -i -c /etc/aide/aide.conf`
-   - b. How long did that take?
-     - i. How much time was wall clock v. system/user time?
-     - ii. Why might you want to know this on your systems?
-     - iii. What do you notice about the output?
-       - 1. What do you need to go read about?
+   - `time aide -i -c /etc/aide/aide.conf`
+   - How long did that take?
+     - How much time was wall clock v. system/user time?
+     - Why might you want to know this on your systems?
+     - What do you notice about the output?
+       1. What do you need to go read about?
 
 ![Image 2](./assets/images/u8/image2.jpeg)
 
@@ -83,18 +83,18 @@ These labs focus on configuration drift tracking and remediation.
 
 7. Set the database up properly
 
-   - a. `cp /var/lib/aide/aide.db.new /var/lib/aide/aide.db`
-   - b. `update-aide.conf`
+   - `cp /var/lib/aide/aide.db.new /var/lib/aide/aide.db`
+   - `update-aide.conf`
 
 8. Test aide by making files in a tracked directory
 
-   - a. `mkdir /root/prolug`
-   - b. `touch /root/prolug/test1`
-   - c. `touch /root/prolug/test1`
-   - d. `time aide -c /etc/aide/aide.conf –check`
-     - i. Did you see your new files created?
-     - ii. How long did this take to run?
-       - 1. What type of usage do you see against user/system space?
+   - `mkdir /root/prolug`
+   - `touch /root/prolug/test1`
+   - `touch /root/prolug/test1`
+   - `time aide -c /etc/aide/aide.conf –check`
+     - Did you see your new files created?
+     - How long did this take to run?
+       1. What type of usage do you see against user/system space?
 
 ![Image 3](./assets/images/u8/image3.png)
 
@@ -104,30 +104,30 @@ These labs focus on configuration drift tracking and remediation.
 
 2. When you finish ensure that you see broken output for 8081, as required.
 
-   - a. `curl node01:8080`
+   - `curl node01:8080`
 
 3. One of the dev teams figured out they could modify the test and qa environments because a
    previous engineer left them in the sudoers file. You can address that separately with the security
    team, but for now you need to get those environments back to working. Run your original
    deployment command to see if it sets the environment back properly.
 
-   - a. `ansible-playbook -i /root/hosts/root/web_environment.yaml`
+   - `ansible-playbook -i /root/hosts/root/web_environment.yaml`
 
 ![Image 4](./assets/images/u8/image4.png)
 
-- b. Did this force the system back into a working configuration?
-  - i. If it worked, would it always work, or could they the system need to be
+- Did this force the system back into a working configuration?
+  - If it worked, would it always work, or could they the system need to be
     manually intervened?
-  - ii. What is your test? (hint: `curl` 8080 8081 and 8082 from previous commands)
-- c. Could this cause potential problems in the environment?
-  - i. If so, is that problem based on technology or operational practices? Why?
+  - What is your test? (hint: `curl` 8080 8081 and 8082 from previous commands)
+- Could this cause potential problems in the environment?
+  - If so, is that problem based on technology or operational practices? Why?
 
 ### Digging Deeper challenge (not required for finishing lab)
 
 1. Complete this lab: <https://killercoda.com/het-tanis/course/Ansible-Labs/19-Ansible-csv-report>
-   - a. Can you think about how you’d use this to verify that a system was stamped
+   - Can you think about how you’d use this to verify that a system was stamped
      according to your build process?
-     - i. You may have to tie it in with something like this lab and add some variables
+     - You may have to tie it in with something like this lab and add some variables
        to your custom facts files, maybe the date of deployment:
        <https://killercoda.com/het-tanis/course/Ansible-Labs/12-Ansible-System-Facts-Grouping>
 
