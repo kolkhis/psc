@@ -1,7 +1,7 @@
 <div class="flex-container">
         <img src="https://github.com/ProfessionalLinuxUsersGroup/img/blob/main/Assets/Logos/ProLUG_Round_Transparent_LOGO.png?raw=true" width="64" height="64"></img>
     <p>
-        <h1>Under Construction</h1>
+        <h1>Configuration Drift and Remediation</h1>
     </p>
 </div>
 
@@ -52,7 +52,7 @@ These labs focus on configuration drift tracking and remediation.
 
    - a. `apt -y install aide`
    - b. What is being put in the path /etc/aide/aide.conf.d/ ?
-   - i. How many files are in there?
+     - i. How many files are in there?
 
 3. Check your version of aide
 
@@ -72,10 +72,10 @@ These labs focus on configuration drift tracking and remediation.
 
    - a. `time aide -i -c /etc/aide/aide.conf`
    - b. How long did that take?
-   - i. How much time was wall clock v. system/user time?
-   - ii. Why might you want to know this on your systems?
-   - iii. What do you notice about the output?
-     - 1. What do you need to go read about?
+     - i. How much time was wall clock v. system/user time?
+     - ii. Why might you want to know this on your systems?
+     - iii. What do you notice about the output?
+       - 1. What do you need to go read about?
 
 ![Image 2](./assets/images/u8/image2.jpeg)
 
@@ -115,20 +115,20 @@ These labs focus on configuration drift tracking and remediation.
 
 ![Image 4](./assets/images/u8/image4.png)
 
-   - b. Did this force the system back into a working configuration?
-     - i. If it worked, would it always work, or could they the system need to be
-       manually intervened?
-     - ii. What is your test? (hint: `curl` 8080 8081 and 8082 from previous commands)
-   - c. Could this cause potential problems in the environment?
-     - i. If so, is that problem based on technology or operational practices? Why?
+- b. Did this force the system back into a working configuration?
+  - i. If it worked, would it always work, or could they the system need to be
+    manually intervened?
+  - ii. What is your test? (hint: `curl` 8080 8081 and 8082 from previous commands)
+- c. Could this cause potential problems in the environment?
+  - i. If so, is that problem based on technology or operational practices? Why?
 
 ### Digging Deeper challenge (not required for finishing lab)
 
 1. Complete this lab: <https://killercoda.com/het-tanis/course/Ansible-Labs/19-Ansible-csv-report>
    - a. Can you think about how you’d use this to verify that a system was stamped
      according to your build process?
-   - i. You may have to tie it in with something like this lab and add some variables
-     to your custom facts files, maybe the date of deployment:
-     <https://killercoda.com/het-tanis/course/Ansible-Labs/12-Ansible-System-Facts-Grouping>
+     - i. You may have to tie it in with something like this lab and add some variables
+       to your custom facts files, maybe the date of deployment:
+       <https://killercoda.com/het-tanis/course/Ansible-Labs/12-Ansible-System-Facts-Grouping>
 
 > Be sure to `reboot` the lab machine from the command line when you are done.
