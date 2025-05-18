@@ -130,9 +130,9 @@ These labs focus on configuration drift tracking and remediation.
 ![Image 4](./assets/images/u8/image4.png)
 
 - Did this force the system back into a working configuration?
-  - If it worked, would it always work, or could they the system need to be
+  - If it worked, would it always work, or would they (the system) need to be
     manually intervened?
-  - What is your test? (hint: `curl` 8080 8081 and 8082 from previous commands)
+  - What is your test? (hint: `curl` the ports `8080`, `8081`, and 8082 from previous commands)
 - Could this cause potential problems in the environment?
   - If so, is that problem based on technology or operational practices? Why?
 
