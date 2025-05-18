@@ -50,27 +50,33 @@ These labs focus on configuration drift tracking and remediation.
 
 2. Install aide and watch the installation happen.
 
-   - `apt -y install aide`
+   ```bash
+   apt -y install aide
+   ```
+
    - What is being put in the path /etc/aide/aide.conf.d/ ?
      - How many files are in there?
 
 3. Check your version of aide
 
-   - `aide -v`
+   ```bash
+   aide -v
+   ```
 
 4. Read the man page (first page).
 
    - What does aide try to do, and how does it do it?
 
-5. What is the configuration of cron found in /etc/cron.daily/dailyaidecheck?
+5. What is the configuration of cron found in `/etc/cron.daily/dailyaidecheck`?
 
    - What does this attempt to do?
    - What checks are there before execution?
    - Read the man for `capsh`, what is it used for?
 
 6. Set up aide according to the default configuration
-
-   - `time aide -i -c /etc/aide/aide.conf`
+   ```bash
+   time aide -i -c /etc/aide/aide.conf
+   ```
    - How long did that take?
      - How much time was wall clock v. system/user time?
      - Why might you want to know this on your systems?
@@ -83,18 +89,22 @@ These labs focus on configuration drift tracking and remediation.
 
 7. Set the database up properly
 
-   - `cp /var/lib/aide/aide.db.new /var/lib/aide/aide.db`
-   - `update-aide.conf`
+   ```bash
+   cp /var/lib/aide/aide.db.new /var/lib/aide/aide.db
+   ```
 
 8. Test aide by making files in a tracked directory
 
-   - `mkdir /root/prolug`
-   - `touch /root/prolug/test1`
-   - `touch /root/prolug/test1`
-   - `time aide -c /etc/aide/aide.conf –check`
-     - Did you see your new files created?
-     - How long did this take to run?
-       1. What type of usage do you see against user/system space?
+   ```bash
+   mkdir /root/prolug
+   touch /root/prolug/test1
+   touch /root/prolug/test2
+   time aide -c /etc/aide/aide.conf --check
+   ```
+
+   - Did you see your new files created?
+   - How long did this take to run?
+     1. What type of usage do you see against user/system space?
 
 ![Image 3](./assets/images/u8/image3.png)
 
@@ -104,21 +114,25 @@ These labs focus on configuration drift tracking and remediation.
 
 2. When you finish ensure that you see broken output for 8081, as required.
 
-   - `curl node01:8080`
+   ```bash
+   curl node01:8080
+   ```
 
 3. One of the dev teams figured out they could modify the test and qa environments because a
    previous engineer left them in the sudoers file. You can address that separately with the security
    team, but for now you need to get those environments back to working. Run your original
    deployment command to see if it sets the environment back properly.
 
-   - `ansible-playbook -i /root/hosts/root/web_environment.yaml`
+   ```bash
+   ansible-playbook -i /root/hosts/root/web_environment.yaml
+   ```
 
 ![Image 4](./assets/images/u8/image4.png)
 
 - Did this force the system back into a working configuration?
-  - If it worked, would it always work, or could they the system need to be
+  - If it worked, would it always work, or would they (the systems) need to be
     manually intervened?
-  - What is your test? (hint: `curl` 8080 8081 and 8082 from previous commands)
+  - What is your test? (hint: `curl` the ports `8080`, `8081`, and `8082` from previous commands)
 - Could this cause potential problems in the environment?
   - If so, is that problem based on technology or operational practices? Why?
 
