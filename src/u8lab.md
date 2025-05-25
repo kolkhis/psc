@@ -124,7 +124,7 @@ These labs focus on configuration drift tracking and remediation.
    deployment command to see if it sets the environment back properly.
 
    ```bash
-   ansible-playbook -i /root/hosts/root/web_environment.yaml
+   ansible-playbook -i /root/hosts /root/web_environment.yaml
    ```
 
 ![Image 4](./assets/images/u8/image4.png)
