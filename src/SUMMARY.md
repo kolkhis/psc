@@ -40,3 +40,4 @@
 - [Contributors](./contributors.md)
 - [Resources](./resources.md)
 - [Outro](./outro.md)
+- [Smth](./smgh)
