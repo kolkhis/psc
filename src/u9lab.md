@@ -11,12 +11,12 @@ These labs focus on pulling metric information and then visualizing that data qu
 
 #### Downloads
 
-The worksheet has been provided below. The document(s) can be transposed to
+The lab has been provided below. The document(s) can be transposed to
 the desired format so long as the content is preserved. For example, the `.txt`
 could be transposed to a `.md` file.
 
-- <a href="./assets/downloads/u9/u9_lab.txt" target="_blank" download>📥 u9_worksheet(`.txt`)</a>
-- <a href="./assets/downloads/u9/u9_lab.pdf" target="_blank" download>📥 u9_worksheet(`.pdf`)</a>
+- <a href="./assets/downloads/u9/u9_lab.txt" target="_blank" download>📥 u9_lab(`.txt`)</a>
+- <a href="./assets/downloads/u9/u9_lab.pdf" target="_blank" download>📥 u9_lab(`.pdf`)</a>
 
 ### Setting up Rsyslog with TLS
 
